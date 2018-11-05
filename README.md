@@ -19,4 +19,4 @@ This is free and unencumbered software released into the public domain. For more
 [LICENSE]: /LICENSE
 [Registry Reporting Repository]: https://github.com/seitsu/registry-reporting-repository
 [Registry Report Structure]: https://github.com/seitsu/registry-report-structure
-[draft]: /draft-mcpherson-sattler-registry-transaction-report.txt
+[draft]: /draft-mcpherson-sattler-ry-transaction-report.txt
