@@ -55,15 +55,21 @@ Table of Contents
      2.2.  Dates and Times . . . . . . . . . . . . . . . . . . . . .   3
      2.3.  Character Encoding  . . . . . . . . . . . . . . . . . . .   3
      2.4.  Currency  . . . . . . . . . . . . . . . . . . . . . . . .   3
-   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   4
-   7.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
-   8.  Implementation Status . . . . . . . . . . . . . . . . . . . .   5
-   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   5
-     9.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
-     9.2.  Informative References  . . . . . . . . . . . . . . . . .   6
-   Appendix A.  Change History . . . . . . . . . . . . . . . . . . .   6
-   Appendix B.  Acknowledgements . . . . . . . . . . . . . . . . . .   6
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   6
+   3.  Transaction Types . . . . . . . . . . . . . . . . . . . . . .   4
+   4.  Transaction Periods . . . . . . . . . . . . . . . . . . . . .   4
+   5.  Transaction Fees  . . . . . . . . . . . . . . . . . . . . . .   5
+     5.1.  Deviating Fees  . . . . . . . . . . . . . . . . . . . . .   5
+   6.  Registrar ID  . . . . . . . . . . . . . . . . . . . . . . . .   5
+   7.  Example Format  . . . . . . . . . . . . . . . . . . . . . . .   5
+   8.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   6
+   9.  Security Considerations . . . . . . . . . . . . . . . . . . .   6
+   10. Implementation Status . . . . . . . . . . . . . . . . . . . .   6
+   11. References  . . . . . . . . . . . . . . . . . . . . . . . . .   7
+     11.1.  Normative References   . . . . . . . . . . . . . . . . .   7
+     11.2.  Informative References   . . . . . . . . . . . . . . . .   7
+   Appendix A.  Change History . . . . . . . . . . . . . . . . . . .   8
+   Appendix B.  Acknowledgements . . . . . . . . . . . . . . . . . .   8
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   8
 
 McPherson & Sattler         Expires May 4, 2019                 [Page 2]
 
@@ -115,18 +121,65 @@ Internet-Draft          Registry Transaction Report        November 2018
 2.4.  Currency
 
    MUST be as defined in
-   [I-D.mcpherson-sattler-registry-report-structure].
+   [I-D.mcpherson-sattler-registry-report-structure]. 
    
-6.  IANA Considerations
+3.  Transaction Types
+
+   Each transaction MUST be assigned to a type. Those type MUST either
+   be 'CREATE', 'RENEWAL', 'AUTORENEW', 'TRANSFER' or 'RESTORE'.
+   
+
+   CREATE     A successful domain create within the report period.
+   
+   RENEWAL    A successful explicit domain name renewal executed by the
+              domain name registrar within the report period.
+            
+   AUTORENEW  A successful domain name auto-renewal by the domain name
+              registry within the report period.
+              
+   TRANSFER   A successful domain name transfer within the report
+              period.
+              
+   RESTORE    A successful domain name restore within the report period.
+              This event MUST only include the restore fee. Any
+              additional renewal fee MUST be independently listed.
+
+4.  Transaction Periods
+   
+   Transaction Types usually occur in periods of 1 to 10 years,
+   sometimes there are monthly periods. Therefore each transaction MUST
+   have a period associated.
+   
+   The format MUST be in the format <integer><character>, where
+   <integer> MUST be between 1 and 99, without any leading zero, and
+   <charter> MUST be either 'y' for year or 'm' for month.
+   
+McPherson & Sattler         Expires May 4, 2019                 [Page 4]
+
+Internet-Draft          Registry Transaction Report        November 2018
+   
+5.  Transaction Fees
+
+5.1.  Deviating Fees
+
+6.  Registrar ID
+
+7.  Example Format
+
+McPherson & Sattler         Expires May 4, 2019                 [Page 5]
+
+Internet-Draft          Registry Transaction Report        November 2018
+   
+8.  IANA Considerations
 
    This document has no IANA actions.
    
-7.  Security Considerations
+9.  Security Considerations
 
    The registry reporting reports described in this document do not
    provide any security services.
 
-8.  Implementation Status
+10.  Implementation Status
 
    Note to RFC Editor: Please remove this section and the reference to
    [RFC7942] before publication.
@@ -153,13 +206,13 @@ Internet-Draft          Registry Transaction Report        November 2018
 
    Add implementation details once available.
    
-McPherson & Sattler         Expires May 4, 2019                 [Page 4]
+McPherson & Sattler         Expires May 4, 2019                 [Page 6]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
-9.  References
+11.  References
 
-9.1.  Normative References
+11.1.  Normative References
 
    [I-D.mcpherson-sattler-registry-report-structure]
               McPherson, N. and Sattler, T., "Registry Report Strucutre"
@@ -171,7 +224,7 @@ Internet-Draft          Registry Transaction Report        November 2018
               Requirement Levels", BCP 14, RFC 2119, March 1997,
               <https://www.rfc-editor.org/info/rfc2119>.
 
-9.2.  Informative References
+11.2.  Informative References
 
    [I-D.mcpherson-sattler-registry-reporting-repo]
               McPherson, N. and Sattler, T., "Registry Reporting
@@ -188,7 +241,7 @@ Appendix A.  Change History
 
    TBD
    
-McPherson & Sattler         Expires May 4, 2019                 [Page 5]
+McPherson & Sattler         Expires May 4, 2019                 [Page 7]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -215,4 +268,4 @@ Authors' Addresses
    Email: tobias.sattler@me.com
    URI:   https://tobiassattler.com
 
-McPherson & Sattler         Expires May 4, 2019                 [Page 6]
+McPherson & Sattler         Expires May 4, 2019                 [Page 8]
