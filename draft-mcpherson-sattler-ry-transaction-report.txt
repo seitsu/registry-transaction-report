@@ -57,7 +57,7 @@ Table of Contents
      2.4.  Currency  . . . . . . . . . . . . . . . . . . . . . . . .   3
    3.  Report Headings . . . . . . . . . . . . . . . . . . . . . . .   4
    4.  Transaction Types . . . . . . . . . . . . . . . . . . . . . .   4
-   5.  Transaction Periods . . . . . . . . . . . . . . . . . . . . .   4
+   5.  Transaction Periods . . . . . . . . . . . . . . . . . . . . .   5
    6.  Transaction Fees  . . . . . . . . . . . . . . . . . . . . . .   5
      6.1.  Deviating Fees  . . . . . . . . . . . . . . . . . . . . .   5
    7.  Registrar ID  . . . . . . . . . . . . . . . . . . . . . . . .   5
@@ -115,15 +115,15 @@ Internet-Draft          Registry Transaction Report        November 2018
    MUST be as defined in
    [I-D.mcpherson-sattler-registry-report-structure].
    
+2.4.  Currency
+
+   MUST be as defined in
+   [I-D.mcpherson-sattler-registry-report-structure].
+   
 McPherson & Sattler         Expires May 4, 2019                 [Page 3]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
-2.4.  Currency
-
-   MUST be as defined in
-   [I-D.mcpherson-sattler-registry-report-structure]. 
-   
 3.  Report Headings
 
    The first row MUST be the report headings and MUST contain the
@@ -155,10 +155,7 @@ Internet-Draft          Registry Transaction Report        November 2018
                      transaction.
    
    REGISTRARID       It MUST contain the registrar ID of the succesful
-                     transaction according section 7 of this document. 
-      
-The first row MUST be the column headings and MUST be listed in the following order:
-TLD, Domain Name, Timestamp, Event, Period, Transaction Cost, Currency, Description, Registrar ID
+                     transaction according section 7 of this document.
    
 4.  Transaction Types
 
@@ -180,6 +177,10 @@ TLD, Domain Name, Timestamp, Event, Period, Transaction Cost, Currency, Descript
    RESTORE    A successful domain name restore within the report period.
               This event MUST only include the restore fee. Any
               additional renewal fee MUST be independently listed.
+              
+McPherson & Sattler         Expires May 4, 2019                 [Page 4]
+
+Internet-Draft          Registry Transaction Report        November 2018
 
 5.  Transaction Periods
    
@@ -195,13 +196,15 @@ TLD, Domain Name, Timestamp, Event, Period, Transaction Cost, Currency, Descript
    MUST be used, e.g. instead of 12m or 24m, it should be 1y
    respectively 2y.
    
-McPherson & Sattler         Expires May 4, 2019                 [Page 4]
-
-Internet-Draft          Registry Transaction Report        November 2018
-   
 6.  Transaction Fees
 
+   All transactions MUST have a fee associated. The fee amount, the
+   currency and the period MUST be listed separately.
+
 6.1.  Deviating Fees
+
+   If a domain name incurs a non-standard premium fee, a description
+   of the price category SHOULD be given.
 
 7.  Registrar ID
 
