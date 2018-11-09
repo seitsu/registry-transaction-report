@@ -61,16 +61,16 @@ Table of Contents
    6.  Transaction Fees  . . . . . . . . . . . . . . . . . . . . . .   5
      6.1.  Deviating Fees  . . . . . . . . . . . . . . . . . . . . .   5
    7.  Registrar ID  . . . . . . . . . . . . . . . . . . . . . . . .   5
-   8.  Example Format  . . . . . . . . . . . . . . . . . . . . . . .   5
-   9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   6
-   10. Security Considerations . . . . . . . . . . . . . . . . . . .   6
-   11. Implementation Status . . . . . . . . . . . . . . . . . . . .   6
-   12. References  . . . . . . . . . . . . . . . . . . . . . . . . .   7
-     12.1.  Normative References   . . . . . . . . . . . . . . . . .   7
-     12.2.  Informative References   . . . . . . . . . . . . . . . .   7
+   8.  Example Format  . . . . . . . . . . . . . . . . . . . . . . .   6
+   9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   7
+   10. Security Considerations . . . . . . . . . . . . . . . . . . .   7
+   11. Implementation Status . . . . . . . . . . . . . . . . . . . .   7
+   12. References  . . . . . . . . . . . . . . . . . . . . . . . . .   8
+     12.1.  Normative References   . . . . . . . . . . . . . . . . .   8
+     12.2.  Informative References   . . . . . . . . . . . . . . . .   8
    Appendix A.  Change History . . . . . . . . . . . . . . . . . . .   8
-   Appendix B.  Acknowledgements . . . . . . . . . . . . . . . . . .   8
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   8
+   Appendix B.  Acknowledgements . . . . . . . . . . . . . . . . . .   9
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   9
 
 McPherson & Sattler         Expires May 4, 2019                 [Page 2]
 
@@ -144,6 +144,8 @@ Internet-Draft          Registry Transaction Report        November 2018
    
    PERIOD            It MUST contain the period of the the successful
                      transaction according section 5 of this document.
+                     It MAY be empty if no period is assign to the
+                     transaction.
    
    FEE               It MUST contain the fee of the successful 
                      transaction according section 6 of this document.
@@ -161,7 +163,6 @@ Internet-Draft          Registry Transaction Report        November 2018
 
    Each transaction MUST be assigned to a type. Those type MUST either
    be 'CREATE', 'RENEWAL', 'AUTORENEW', 'TRANSFER' or 'RESTORE'.
-   
 
    CREATE     A successful domain create within the report period.
    
@@ -211,10 +212,27 @@ Internet-Draft          Registry Transaction Report        November 2018
    A unique registrar ID MUST be listed, with each transaction. Those
    IDs MUST be according the IANA Registrars IDs (https://www.iana.org/
    assignments/registrar-ids/registrar-ids.xhtml).
+   
+McPherson & Sattler         Expires May 4, 2019                 [Page 5]
+
+Internet-Draft          Registry Transaction Report        November 2018
 
 8.  Example Format
 
-McPherson & Sattler         Expires May 4, 2019                 [Page 5]
+   This is an example of a transaction report for one top-level domain
+   .example.
+   
+   Filename: example_transactions_2018-08-02.csv
+   
+   TLD;DOMAIN;TIMESTAMP;TRANSACTIONTYPE;PERIOD;FEE;CURRENCY;DESCRIPTION;
+   REGISTRARID;
+   example;nic;2018-11-08T08:01:01Z;AUTORENEW;1Y;10.00;USD;;1;
+   example;test1;2018-11-09T08:00:00Z;CREATE;1Y;10.00;USD;;1;
+   example;test2;2018-11-09T08:01:01Z;CREATE;1Y;1000.00;USD;PREMIUM;1;
+   example;test3;2018-11-10T07:00:00Z;RESTORE;;40.00;USD;;1;
+   example;test3;2018-11-10T07:00:01Z;RENEWAL;;10.00;USD;;1;
+
+McPherson & Sattler         Expires May 4, 2019                 [Page 6]
 
 Internet-Draft          Registry Transaction Report        November 2018
    
@@ -254,7 +272,7 @@ Internet-Draft          Registry Transaction Report        November 2018
 
    Add implementation details once available.
    
-McPherson & Sattler         Expires May 4, 2019                 [Page 6]
+McPherson & Sattler         Expires May 4, 2019                 [Page 7]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -289,7 +307,7 @@ Appendix A.  Change History
 
    TBD
    
-McPherson & Sattler         Expires May 4, 2019                 [Page 7]
+McPherson & Sattler         Expires May 4, 2019                 [Page 8]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -316,4 +334,4 @@ Authors' Addresses
    Email: tobias.sattler@me.com
    URI:   https://tobiassattler.com
 
-McPherson & Sattler         Expires May 4, 2019                 [Page 8]
+McPherson & Sattler         Expires May 4, 2019                 [Page 9]
