@@ -1,7 +1,7 @@
 Internet Engineering Task Force                             N. McPherson
 Internet-Draft                                              1&1 IONOS SE
 Intended status: Best Current Practice                        T. Sattler
-Expires: May 4, 2019                                    November 5, 2018
+Expires: May 8, 2019                                    November 9, 2018
 
                        Registry Transaction Report
             draft-mcpherson-sattler-ry-transaction-report-00
@@ -27,7 +27,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress".
 
-   This Internet-Draft will expire on May 4, 2019.
+   This Internet-Draft will expire on May 8, 2019.
 
 Copyright Notice
 
@@ -125,6 +125,40 @@ Internet-Draft          Registry Transaction Report        November 2018
    [I-D.mcpherson-sattler-registry-report-structure]. 
    
 3.  Report Headings
+
+   The first row MUST be the report headings and MUST contain the
+   following columns in the following order:
+
+   TLD               It MUST contain the top-level domain name and
+                     formatted according section 2.1 of this document.
+   
+   DOMAIN            It MUST contain the domain name without the TLD
+                     formatted according section 2.1 of this document. 
+   
+   TIMESTAMP         It MUST contain the timestamp of the successful
+                     transaction formatted according section 2.2 of
+                     this document.
+   
+   TRANSACTIONTYPE   It MUST contain the type of the successful
+                     transaction according section 4 of this document.
+   
+   PERIOD            It MUST contain the period of the the successful
+                     transaction according section 5 of this document.
+   
+   FEE               It MUST contain the fee of the successful 
+                     transaction according section 6 of this document.
+   
+   CURRENCY          It MUST contain the currency of the succesful
+                     transaction according section 2.4 of this document.
+   
+   DESCRIPTION       It MAY contain a free description of the succesful
+                     transaction.
+   
+   REGISTRARID       It MUST contain the registrar ID of the succesful
+                     transaction according section 7 of this document. 
+      
+The first row MUST be the column headings and MUST be listed in the following order:
+TLD, Domain Name, Timestamp, Event, Period, Transaction Cost, Currency, Description, Registrar ID
    
 4.  Transaction Types
 
@@ -170,6 +204,10 @@ Internet-Draft          Registry Transaction Report        November 2018
 6.1.  Deviating Fees
 
 7.  Registrar ID
+
+   A unique registrar ID MUST be listed, with each transaction. Those
+   IDs MUST be according the IANA Registrars IDs (https://www.iana.org/
+   assignments/registrar-ids/registrar-ids.xhtml).
 
 8.  Example Format
 
