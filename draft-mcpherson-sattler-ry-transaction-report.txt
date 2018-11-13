@@ -1,7 +1,7 @@
 Internet Engineering Task Force                             N. McPherson
 Internet-Draft                                              1&1 IONOS SE
 Intended status: Best Current Practice                        T. Sattler
-Expires: May 11, 2019                                  November 12, 2018
+Expires: May 12, 2019                                  November 13, 2018
 
                        Registry Transaction Report
             draft-mcpherson-sattler-ry-transaction-report-00
@@ -27,7 +27,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress".
 
-   This Internet-Draft will expire on May 11, 2019.
+   This Internet-Draft will expire on May 12, 2019.
 
 Copyright Notice
 
@@ -44,7 +44,7 @@ Copyright Notice
    the Trust Legal Provisions and are provided without warranty as
    described in the Simplified BSD License.
 
-McPherson & Sattler         Expires May 11, 2019                [Page 1]
+McPherson & Sattler         Expires May 12, 2019                [Page 1]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -72,7 +72,7 @@ Table of Contents
    Appendix B.  Acknowledgements . . . . . . . . . . . . . . . . . .   9
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   9
 
-McPherson & Sattler         Expires May 11, 2019                [Page 2]
+McPherson & Sattler         Expires May 12, 2019                [Page 2]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -120,7 +120,7 @@ Internet-Draft          Registry Transaction Report        November 2018
    MUST be as defined in
    [I-D.mcpherson-sattler-registry-report-structure].
    
-McPherson & Sattler         Expires May 11, 2019                [Page 3]
+McPherson & Sattler         Expires May 12, 2019                [Page 3]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -179,7 +179,7 @@ Internet-Draft          Registry Transaction Report        November 2018
               This event MUST only include the restore fee. Any
               additional renewal fee MUST be independently listed.
               
-McPherson & Sattler         Expires May 11, 2019                [Page 4]
+McPherson & Sattler         Expires May 12, 2019                [Page 4]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -213,7 +213,7 @@ Internet-Draft          Registry Transaction Report        November 2018
    IDs MUST be according the IANA Registrars IDs (https://www.iana.org/
    assignments/registrar-ids/registrar-ids.xhtml).
    
-McPherson & Sattler         Expires May 11, 2019                [Page 5]
+McPherson & Sattler         Expires May 12, 2019                [Page 5]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -232,7 +232,7 @@ Internet-Draft          Registry Transaction Report        November 2018
    example;test3;2018-11-10T07:00:00Z;RESTORE;;40.00;USD;;1;
    example;test3;2018-11-10T07:00:01Z;RENEWAL;;10.00;USD;;1;
 
-McPherson & Sattler         Expires May 11, 2019                [Page 6]
+McPherson & Sattler         Expires May 12, 2019                [Page 6]
 
 Internet-Draft          Registry Transaction Report        November 2018
    
@@ -272,7 +272,7 @@ Internet-Draft          Registry Transaction Report        November 2018
 
    Add implementation details once available.
    
-McPherson & Sattler         Expires May 11, 2019                [Page 7]
+McPherson & Sattler         Expires May 12, 2019                [Page 7]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -307,7 +307,7 @@ Appendix A.  Change History
 
    TBD
    
-McPherson & Sattler         Expires May 11, 2019                [Page 8]
+McPherson & Sattler         Expires May 12, 2019                [Page 8]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -334,4 +334,4 @@ Authors' Addresses
    Email: tobias.sattler@me.com
    URI:   https://tobiassattler.com
 
-McPherson & Sattler         Expires May 11, 2019                [Page 9]
+McPherson & Sattler         Expires May 12, 2019                [Page 9]
