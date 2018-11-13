@@ -1,7 +1,7 @@
 Internet Engineering Task Force                             N. McPherson
 Internet-Draft                                              1&1 IONOS SE
 Intended status: Best Current Practice                        T. Sattler
-Expires: May 12, 2019                                  November 13, 2018
+Expires: May 13, 2019                                  November 14, 2018
 
                        Registry Transaction Report
             draft-mcpherson-sattler-ry-transaction-report-00
@@ -27,7 +27,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress".
 
-   This Internet-Draft will expire on May 12, 2019.
+   This Internet-Draft will expire on May 13, 2019.
 
 Copyright Notice
 
@@ -44,7 +44,7 @@ Copyright Notice
    the Trust Legal Provisions and are provided without warranty as
    described in the Simplified BSD License.
 
-McPherson & Sattler         Expires May 12, 2019                [Page 1]
+McPherson & Sattler         Expires May 13, 2019                [Page 1]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -61,7 +61,9 @@ Table of Contents
    6.  Transaction Fees  . . . . . . . . . . . . . . . . . . . . . .   5
      6.1.  Deviating Fees  . . . . . . . . . . . . . . . . . . . . .   5
    7.  Registrar ID  . . . . . . . . . . . . . . . . . . . . . . . .   5
-   8.  Example Format  . . . . . . . . . . . . . . . . . . . . . . .   6
+   8.  Example . . . . . . . . . . . . . . . . . . . . . . . . . . .   6
+     8.1.  Single TLD File Example . . . . . . . . . . . . . . . . .   6
+     8.2.  Multiple TLDs File Example  . . . . . . . . . . . . . . .   6
    9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   7
    10. Security Considerations . . . . . . . . . . . . . . . . . . .   7
    11. Implementation Status . . . . . . . . . . . . . . . . . . . .   7
@@ -72,7 +74,7 @@ Table of Contents
    Appendix B.  Acknowledgements . . . . . . . . . . . . . . . . . .   9
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   9
 
-McPherson & Sattler         Expires May 12, 2019                [Page 2]
+McPherson & Sattler         Expires May 13, 2019                [Page 2]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -120,20 +122,19 @@ Internet-Draft          Registry Transaction Report        November 2018
    MUST be as defined in
    [I-D.mcpherson-sattler-registry-report-structure].
    
-McPherson & Sattler         Expires May 12, 2019                [Page 3]
+McPherson & Sattler         Expires May 13, 2019                [Page 3]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
 3.  Report Headings
 
-   The first row MUST be the report headings and MUST contain the
-   following columns in the following order:
+   The first row MUST be the column headings in the following order:
 
    TLD               It MUST contain the top-level domain name and
                      formatted according section 2.1 of this document.
    
    DOMAIN            It MUST contain the domain name without the TLD
-                     formatted according section 2.1 of this document. 
+                     formatted according section 2.1 of this document.
    
    TIMESTAMP         It MUST contain the timestamp of the successful
                      transaction formatted according section 2.2 of
@@ -162,7 +163,8 @@ Internet-Draft          Registry Transaction Report        November 2018
 4.  Transaction Types
 
    Each transaction MUST be assigned to a type. Those type MUST either
-   be 'CREATE', 'RENEWAL', 'AUTORENEW', 'TRANSFER' or 'RESTORE'.
+   be 'CREATE', 'RENEWAL', 'AUTORENEW', 'TRANSFER', 'TRADE', 'UPDATE'
+   or 'RESTORE'.
 
    CREATE     A successful domain create within the report period.
    
@@ -175,13 +177,19 @@ Internet-Draft          Registry Transaction Report        November 2018
    TRANSFER   A successful domain name transfer within the report
               period.
               
+   TRADE      A successful domain name trade within the report
+              period.
+              
+McPherson & Sattler         Expires May 13, 2019                [Page 4]
+
+Internet-Draft          Registry Transaction Report        November 2018
+              
+   UPDATE     A successful billable domain name update within the report
+              period.
+              
    RESTORE    A successful domain name restore within the report period.
               This event MUST only include the restore fee. Any
               additional renewal fee MUST be independently listed.
-              
-McPherson & Sattler         Expires May 12, 2019                [Page 4]
-
-Internet-Draft          Registry Transaction Report        November 2018
 
 5.  Transaction Periods
    
@@ -196,6 +204,8 @@ Internet-Draft          Registry Transaction Report        November 2018
    If the number of months results in a full year, then the full year
    MUST be used, e.g. instead of 12m or 24m, it should be 1y
    respectively 2y.
+   
+   The period MAY be empty if no period is assign to the transaction.
    
 6.  Transaction Fees
 
@@ -213,14 +223,16 @@ Internet-Draft          Registry Transaction Report        November 2018
    IDs MUST be according the IANA Registrars IDs (https://www.iana.org/
    assignments/registrar-ids/registrar-ids.xhtml).
    
-McPherson & Sattler         Expires May 12, 2019                [Page 5]
+McPherson & Sattler         Expires May 13, 2019                [Page 5]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
-8.  Example Format
+8.  Example
 
-   This is an example of a transaction report for one top-level domain
-   .example.
+8.1.  Single TLD File Example
+
+   This is an example of a transaction report for a single top-level
+   domain .example.
    
    Filename: example_transactions_2018-11.csv
    
@@ -231,8 +243,25 @@ Internet-Draft          Registry Transaction Report        November 2018
    example;test2;2018-11-09T08:01:01Z;CREATE;1Y;1000.00;USD;PREMIUM;1;
    example;test3;2018-11-10T07:00:00Z;RESTORE;;40.00;USD;;1;
    example;test3;2018-11-10T07:00:01Z;RENEWAL;;10.00;USD;;1;
+   example;test4;2018-11-11T06:30:00Z;TRANSFER;;10.00;USD;;1;
+   
+8.2.  Multiple TLDs File Example
 
-McPherson & Sattler         Expires May 12, 2019                [Page 6]
+   This is an example of a transaction report for multi top-level
+   domains by the example registry.
+   
+   Filename: example_transactions_2018-11.csv
+   
+   TLD;DOMAIN;TIMESTAMP;TRANSACTIONTYPE;PERIOD;FEE;CURRENCY;DESCRIPTION;
+   REGISTRARID;
+   example1;nic;2018-11-08T08:01:01Z;AUTORENEW;1Y;10.00;USD;;1;
+   example1;test1;2018-11-09T08:00:00Z;CREATE;1Y;10.00;USD;;1;
+   example2;test1;2018-11-09T08:01:01Z;CREATE;1Y;1000.00;USD;PREMIUM;1;
+   example3;test1;2018-11-10T07:00:00Z;RESTORE;;40.00;USD;;1;
+   example3;test1;2018-11-10T07:00:01Z;RENEWAL;;10.00;USD;;1;
+   example4;test1;2018-11-11T06:30:00Z;TRANSFER;;10.00;USD;;1;
+
+McPherson & Sattler         Expires May 13, 2019                [Page 6]
 
 Internet-Draft          Registry Transaction Report        November 2018
    
@@ -272,7 +301,7 @@ Internet-Draft          Registry Transaction Report        November 2018
 
    Add implementation details once available.
    
-McPherson & Sattler         Expires May 12, 2019                [Page 7]
+McPherson & Sattler         Expires May 13, 2019                [Page 7]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -304,10 +333,8 @@ Internet-Draft          Registry Transaction Report        November 2018
               <https://www.rfc-editor.org/info/rfc7942>.
    
 Appendix A.  Change History
-
-   TBD
    
-McPherson & Sattler         Expires May 12, 2019                [Page 8]
+McPherson & Sattler         Expires May 13, 2019                [Page 8]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -315,8 +342,6 @@ Appendix B.  Acknowledgements
 
    The authors wish to thank the following persons for their feedback
    and suggestions (sorted alphabetically by company):
-
-   TBD
 
 Authors' Addresses
 
@@ -334,4 +359,4 @@ Authors' Addresses
    Email: tobias.sattler@me.com
    URI:   https://tobiassattler.com
 
-McPherson & Sattler         Expires May 12, 2019                [Page 9]
+McPherson & Sattler         Expires May 13, 2019                [Page 9]
