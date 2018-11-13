@@ -211,6 +211,9 @@ Internet-Draft          Registry Transaction Report        November 2018
 
    All transactions MUST have a fee associated. The fee amount, the
    currency and the period MUST be listed separately.
+   
+   Fees MUST either be whole numbers or rounded to two decimal places.
+   A period is used as the dividing point.
 
 6.1.  Deviating Fees
 
