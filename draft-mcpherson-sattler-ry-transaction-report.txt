@@ -133,8 +133,8 @@ Internet-Draft          Registry Transaction Report        November 2018
    TLD               It MUST contain the top-level domain name and
                      formatted according section 2.1 of this document.
    
-   DOMAIN            It MUST contain the domain name without the TLD
-                     formatted according section 2.1 of this document.
+   DOMAIN            It MUST contain the domain name formatted according
+                     section 2.1 of this document.
    
    TIMESTAMP         It MUST contain the timestamp of the successful
                      transaction formatted according section 2.2 of
