@@ -194,16 +194,16 @@ Internet-Draft          Registry Transaction Report        November 2018
 5.  Transaction Periods
    
    Transaction Types usually occur in periods of 1 to 10 years,
-   sometimes there are monthly periods. Therefore each transaction MUST
+   sometimes there are monthly periods. Therefore, each transaction MUST
    have a period associated.
    
    The format MUST be in the format <integer><character>, where
    <integer> MUST be between 1 and 99, without any leading zero, and
-   <charter> MUST be either 'y' for year or 'm' for month.
+   <charter> MUST be either 'Y' for year or 'M' for month.
    
    If the number of months results in a full year, then the full year
-   MUST be used, e.g. instead of 12m or 24m, it should be 1y
-   respectively 2y.
+   MUST be used, e.g. instead of 12M or 24M, it should be 1Y
+   respectively 2Y.
    
    The period MAY be empty if no period is assign to the transaction.
    
@@ -242,11 +242,11 @@ Internet-Draft          Registry Transaction Report        November 2018
    TLD,DOMAIN,TIMESTAMP,TRANSACTIONTYPE,PERIOD,FEE,CURRENCY,DESCRIPTION,
    REGISTRARID,
    example,nic,2018-11-08T08:01:01Z,AUTORENEW,1Y,10.00,USD,,1,
-   example,test1,2018-11-09T08:00:00Z,CREATE,1Y,10.00,USD,,1,
-   example,test2,2018-11-09T08:01:01Z,CREATE,1Y,1000.00,USD,PREMIUM,1,
-   example,test3,2018-11-10T07:00:00Z,RESTORE,,40.00,USD,,1,
-   example,test3,2018-11-10T07:00:01Z,RENEWAL,,10.00,USD,,1,
-   example,test4,2018-11-11T06:30:00Z,TRANSFER,,10.00,USD,,1,
+   example,foo,2018-11-09T08:00:00Z,CREATE,3Y,10.00,USD,,1,
+   example,bar,2018-11-09T08:01:01Z,CREATE,1Y,1000.00,USD,PREMIUM,1,
+   example,foobar,2018-11-10T07:00:00Z,RESTORE,,40.00,USD,,1,
+   example,foobar,2018-11-10T07:00:01Z,RENEWAL,,10.00,USD,,1,
+   example,xn--r8jz45g,2018-11-11T06:30:00Z,TRANSFER,,10.00,USD,,1,
    
 8.2.  Multiple TLDs File Example
 
@@ -257,12 +257,12 @@ Internet-Draft          Registry Transaction Report        November 2018
    
    TLD,DOMAIN,TIMESTAMP,TRANSACTIONTYPE,PERIOD,FEE,CURRENCY,DESCRIPTION,
    REGISTRARID,
-   example1,nic,2018-11-08T08:01:01Z,AUTORENEW,1Y,10.00,USD,,1,
-   example1,test1,2018-11-09T08:00:00Z,CREATE,1Y,10.00,USD,,1,
-   example2,test1,2018-11-09T08:01:01Z,CREATE,1Y,1000.00,USD,PREMIUM,1,
-   example3,test1,2018-11-10T07:00:00Z,RESTORE,,40.00,USD,,1,
-   example3,test1,2018-11-10T07:00:01Z,RENEWAL,,10.00,USD,,1,
-   example4,test1,2018-11-11T06:30:00Z,TRANSFER,,10.00,USD,,1,
+   example,nic,2018-11-08T08:01:01Z,AUTORENEW,1Y,10.00,USD,,1,
+   example1,foo,2018-11-09T08:00:00Z,CREATE,6M,10.00,USD,,1,
+   example2,bar,2018-11-09T08:01:01Z,CREATE,1Y,1000.00,USD,PREMIUM,1,
+   xn--0zwm56d,xn--fsqu00a,2018-11-10T07:00:00Z,RESTORE,,40.00,USD,,1,
+   xn--0zwm56d,xn--fsqu00a,2018-11-10T07:00:01Z,RENEWAL,,10.00,USD,,1,
+   xn--zckzah,xn--r8jz45g,2018-11-11T06:30:00Z,TRANSFER,,10.00,USD,,1,
 
 McPherson & Sattler         Expires May 15, 2019                [Page 6]
 
