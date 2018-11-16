@@ -199,11 +199,11 @@ Internet-Draft          Registry Transaction Report        November 2018
    
    The format MUST be in the format <integer><character>, where
    <integer> MUST be between 1 and 99, without any leading zero, and
-   <charter> MUST be either 'Y' for year or 'M' for month.
+   <charter> MUST be either 'y' for years or 'm' for months.
    
    If the number of months results in a full year, then the full year
-   MUST be used, e.g. instead of 12M or 24M, it should be 1Y
-   respectively 2Y.
+   MUST be used, e.g. instead of 12m or 24m, it should be 1y
+   respectively 2y.
    
    The period MAY be empty if no period is assign to the transaction.
    
