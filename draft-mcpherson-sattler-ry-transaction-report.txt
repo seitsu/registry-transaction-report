@@ -49,35 +49,31 @@ McPherson & Sattler         Expires May 29, 2019                [Page 1]
 Internet-Draft          Registry Transaction Report        November 2018
 
 Table of Contents
-   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   3
-   2.  Terminology and Definitions . . . . . . . . . . . . . . . . .   3
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+   2.  Terminology and Definitions . . . . . . . . . . . . . . . . .   2
      2.1.  Internationalized Domain Names  . . . . . . . . . . . . .   3
      2.2.  Dates and Times . . . . . . . . . . . . . . . . . . . . .   3
      2.3.  Character Encoding  . . . . . . . . . . . . . . . . . . .   3
      2.4.  Currency  . . . . . . . . . . . . . . . . . . . . . . . .   3
-   3.  Report Headings . . . . . . . . . . . . . . . . . . . . . . .   4
+   3.  Report Headings . . . . . . . . . . . . . . . . . . . . . . .   3
    4.  Transaction Types . . . . . . . . . . . . . . . . . . . . . .   4
-   5.  Transaction Periods . . . . . . . . . . . . . . . . . . . . .   5
-   6.  Transaction Fees  . . . . . . . . . . . . . . . . . . . . . .   5
+   5.  Transaction Periods . . . . . . . . . . . . . . . . . . . . .   4
+   6.  Transaction Fees  . . . . . . . . . . . . . . . . . . . . . .   4
      6.1.  Deviating Fees  . . . . . . . . . . . . . . . . . . . . .   5
    7.  Registrar ID  . . . . . . . . . . . . . . . . . . . . . . . .   5
-   8.  Example . . . . . . . . . . . . . . . . . . . . . . . . . . .   6
-     8.1.  Single TLD File Example . . . . . . . . . . . . . . . . .   6
-     8.2.  Multiple TLDs File Example  . . . . . . . . . . . . . . .   6
-   9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   7
-   10. Security Considerations . . . . . . . . . . . . . . . . . . .   7
-   11. Implementation Status . . . . . . . . . . . . . . . . . . . .   7
-   12. References  . . . . . . . . . . . . . . . . . . . . . . . . .   8
-     12.1.  Normative References   . . . . . . . . . . . . . . . . .   8
-     12.2.  Informative References   . . . . . . . . . . . . . . . .   8
-   Appendix A.  Change History . . . . . . . . . . . . . . . . . . .   8
-     A.1.  Change from 00 to 01  . . . . . . . . . . . . . . . . . .   8
-   Appendix B.  Acknowledgements . . . . . . . . . . . . . . . . . .   9
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   9
-
-McPherson & Sattler         Expires May 29, 2019                [Page 2]
-
-Internet-Draft          Registry Transaction Report        November 2018
+   8.  Example . . . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     8.1.  Single TLD File Example . . . . . . . . . . . . . . . . .   5
+     8.2.  Multiple TLDs File Example  . . . . . . . . . . . . . . .   5
+   9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   6
+   10. Security Considerations . . . . . . . . . . . . . . . . . . .   6
+   11. Implementation Status . . . . . . . . . . . . . . . . . . . .   6
+   12. References  . . . . . . . . . . . . . . . . . . . . . . . . .   6
+     12.1.  Normative References   . . . . . . . . . . . . . . . . .   6
+     12.2.  Informative References   . . . . . . . . . . . . . . . .   7
+   Appendix A.  Change History . . . . . . . . . . . . . . . . . . .   7
+     A.1.  Change from 00 to 01  . . . . . . . . . . . . . . . . . .   7
+   Appendix B.  Acknowledgements . . . . . . . . . . . . . . . . . .   7
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   7
 
 1.  Introduction
 
@@ -103,6 +99,10 @@ Internet-Draft          Registry Transaction Report        November 2018
    document are to be interpreted as described in [RFC2119] when
    specified in their uppercase forms.
    
+McPherson & Sattler         Expires May 29, 2019                [Page 2]
+
+Internet-Draft          Registry Transaction Report        November 2018
+   
 2.1.  Internationalized Domain Names
 
    MUST be as defined in
@@ -122,10 +122,6 @@ Internet-Draft          Registry Transaction Report        November 2018
 
    MUST be as defined in
    [I-D.mcpherson-sattler-registry-report-structure].
-   
-McPherson & Sattler         Expires May 29, 2019                [Page 3]
-
-Internet-Draft          Registry Transaction Report        November 2018
 
 3.  Report Headings
 
@@ -160,6 +156,10 @@ Internet-Draft          Registry Transaction Report        November 2018
    
    REGISTRARID       It MUST contain the registrar ID of the succesful
                      transaction according section 7 of this document.
+                     
+McPherson & Sattler         Expires May 29, 2019                [Page 3]
+
+Internet-Draft          Registry Transaction Report        November 2018
    
 4.  Transaction Types
 
@@ -180,10 +180,6 @@ Internet-Draft          Registry Transaction Report        November 2018
               
    TRADE      A successful domain name trade within the report
               period.
-              
-McPherson & Sattler         Expires May 29, 2019                [Page 4]
-
-Internet-Draft          Registry Transaction Report        November 2018
               
    UPDATE     A successful billable domain name update within the report
               period.
@@ -215,6 +211,10 @@ Internet-Draft          Registry Transaction Report        November 2018
    
    Fees MUST either be whole numbers or rounded to two decimal places.
    A period is used as the dividing point.
+   
+McPherson & Sattler         Expires May 29, 2019                [Page 4]
+
+Internet-Draft          Registry Transaction Report        November 2018
 
 6.1.  Deviating Fees
 
@@ -227,10 +227,6 @@ Internet-Draft          Registry Transaction Report        November 2018
    IDs MUST be according the IANA registrars ids (https://www.iana.org/
    assignments/registrar-ids/registrar-ids.xhtml) where applicable,
    otherwise another unique registrar id MUST be used.
-   
-McPherson & Sattler         Expires May 29, 2019                [Page 5]
-
-Internet-Draft          Registry Transaction Report        November 2018
 
 8.  Example
 
@@ -272,7 +268,7 @@ Internet-Draft          Registry Transaction Report        November 2018
    xn--zckzah,xn--r8jz45g.xn--zckzah,2018-11-11T06:30:00Z,TRANSFER,1y,
    1200,JPY,,1
 
-McPherson & Sattler         Expires May 29, 2019                [Page 6]
+McPherson & Sattler         Expires May 29, 2019                [Page 5]
 
 Internet-Draft          Registry Transaction Report        November 2018
    
@@ -282,7 +278,7 @@ Internet-Draft          Registry Transaction Report        November 2018
    
 10.  Security Considerations
 
-   The registry reporting reports described in this document do not
+   The registry transaction report described in this document does not
    provide any security services.
 
 11.  Implementation Status
@@ -311,10 +307,6 @@ Internet-Draft          Registry Transaction Report        November 2018
    they see fit".
 
    Add implementation details once available.
-   
-McPherson & Sattler         Expires May 29, 2019                [Page 7]
-
-Internet-Draft          Registry Transaction Report        November 2018
 
 12.  References
 
@@ -329,6 +321,10 @@ Internet-Draft          Registry Transaction Report        November 2018
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119, March 1997,
               <https://www.rfc-editor.org/info/rfc2119>.
+              
+McPherson & Sattler         Expires May 29, 2019                [Page 6]
+
+Internet-Draft          Registry Transaction Report        November 2018
 
 12.2.  Informative References
 
@@ -348,10 +344,7 @@ Appendix A.  Change History
 A.1.  Change from 00 to 01
 
    Added acknowledgements. Changed Y to lowercase. Fixed csv examples.
-   
-McPherson & Sattler         Expires May 29, 2019                [Page 8]
-
-Internet-Draft          Registry Transaction Report        November 2018
+   Changed security considerations.
 
 Appendix B.  Acknowledgements
 
@@ -376,5 +369,5 @@ Authors' Addresses
    Email: tobias.sattler@me.com
    URI:   https://tobiassattler.com
 
-McPherson & Sattler         Expires May 29, 2019                [Page 9]
+McPherson & Sattler         Expires May 29, 2019                [Page 7]
 
