@@ -1,16 +1,16 @@
 Internet Engineering Task Force                             N. McPherson
 Internet-Draft                                              1&1 IONOS SE
 Intended status: Best Current Practice                T. Sattler, Editor
-Expires: May 15, 2019                                  November 16, 2018
+Expires: May 29, 2019                                  November 30, 2018
 
                        Registry Transaction Report
-            draft-mcpherson-sattler-ry-transaction-report-00
+            draft-mcpherson-sattler-ry-transaction-report-01
 
 Abstract
 
-   This document describes the content of a Transaction Report based on
-   the Registry Report Structure and delivered by the Registry Reporting
-   Repository.
+   This document describes the content of a transaction report based on
+   the registry report structure and delivered by the registry reporting
+   repository.
 
 Status of This Memo
 
@@ -27,7 +27,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress".
 
-   This Internet-Draft will expire on May 15, 2019.
+   This Internet-Draft will expire on May 29, 2019.
 
 Copyright Notice
 
@@ -44,7 +44,7 @@ Copyright Notice
    the Trust Legal Provisions and are provided without warranty as
    described in the Simplified BSD License.
 
-McPherson & Sattler         Expires May 15, 2019                [Page 1]
+McPherson & Sattler         Expires May 29, 2019                [Page 1]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -71,10 +71,11 @@ Table of Contents
      12.1.  Normative References   . . . . . . . . . . . . . . . . .   8
      12.2.  Informative References   . . . . . . . . . . . . . . . .   8
    Appendix A.  Change History . . . . . . . . . . . . . . . . . . .   8
+     A.1.  Change from 00 to 01  . . . . . . . . . . . . . . . . . .   8
    Appendix B.  Acknowledgements . . . . . . . . . . . . . . . . . .   9
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   9
 
-McPherson & Sattler         Expires May 15, 2019                [Page 2]
+McPherson & Sattler         Expires May 29, 2019                [Page 2]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -91,7 +92,7 @@ Internet-Draft          Registry Transaction Report        November 2018
    each registry's intranet in a different manner according to each
    registry's own document management set up.
    
-   This document describes the content of a Transaction Report based on
+   This document describes the content of a transaction report based on
    the [I-D.mcpherson-sattler-registry-report-structure] and delivered
    by the [I-D.mcpherson-sattler-registry-reporting-repo].
 
@@ -122,7 +123,7 @@ Internet-Draft          Registry Transaction Report        November 2018
    MUST be as defined in
    [I-D.mcpherson-sattler-registry-report-structure].
    
-McPherson & Sattler         Expires May 15, 2019                [Page 3]
+McPherson & Sattler         Expires May 29, 2019                [Page 3]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -180,7 +181,7 @@ Internet-Draft          Registry Transaction Report        November 2018
    TRADE      A successful domain name trade within the report
               period.
               
-McPherson & Sattler         Expires May 15, 2019                [Page 4]
+McPherson & Sattler         Expires May 29, 2019                [Page 4]
 
 Internet-Draft          Registry Transaction Report        November 2018
               
@@ -222,12 +223,12 @@ Internet-Draft          Registry Transaction Report        November 2018
 
 7.  Registrar ID
 
-   A unique registrar ID MUST be listed, with each transaction. Those
-   IDs MUST be according the IANA Registrars IDs (https://www.iana.org/
+   A unique registrar id MUST be listed, with each transaction. Those
+   IDs MUST be according the IANA registrars ids (https://www.iana.org/
    assignments/registrar-ids/registrar-ids.xhtml) where applicable,
-   otherwise another unique registrar ID MUST be used.
+   otherwise another unique registrar id MUST be used.
    
-McPherson & Sattler         Expires May 15, 2019                [Page 5]
+McPherson & Sattler         Expires May 29, 2019                [Page 5]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -241,15 +242,15 @@ Internet-Draft          Registry Transaction Report        November 2018
    Filename: example_transactions_2018-11.csv
    
    TLD,DOMAIN,TIMESTAMP,TRANSACTIONTYPE,PERIOD,FEE,CURRENCY,DESCRIPTION,
-   REGISTRARID,
-   example,nic.example,2018-11-08T08:01:01Z,AUTORENEW,1Y,10,USD,,1,
-   example,foo.example,2018-11-09T08:00:00Z,CREATE,3Y,10,USD,,1,
-   example,bar.example,2018-11-09T08:01:01Z,CREATE,1Y,1000,USD,
-   PREMIUM A,1,
-   example,foobar.example,2018-11-10T07:00:00Z,RESTORE,,40,USD,,1,
-   example,foobar.example,2018-11-10T07:00:01Z,RENEWAL,,10,USD,,1,
-   example,xn--r8jz45g.example,2018-11-11T06:30:00Z,TRANSFER,,12.75,USD,
-   ,1,
+   REGISTRARID
+   example,nic.example,2018-11-08T08:01:01Z,AUTORENEW,1y,10,USD,,1
+   example,foo.example,2018-11-09T08:00:00Z,CREATE,3y,10,USD,,1
+   example,bar.example,2018-11-09T08:01:01Z,CREATE,1y,1000,USD,
+   PREMIUM A,1
+   example,foobar.example,2018-11-10T07:00:00Z,RESTORE,,40,USD,,1
+   example,foobar.example,2018-11-10T07:00:01Z,RENEWAL,,10,USD,,1
+   example,xn--r8jz45g.example,2018-11-11T06:30:00Z,TRANSFER,1y,12.75,
+   USD,,1
    
 8.2.  Multiple TLDs File Example
 
@@ -259,19 +260,19 @@ Internet-Draft          Registry Transaction Report        November 2018
    Filename: example_transactions_2018-11.csv
    
    TLD,DOMAIN,TIMESTAMP,TRANSACTIONTYPE,PERIOD,FEE,CURRENCY,DESCRIPTION,
-   REGISTRARID,
-   example,nic.example,2018-11-08T08:01:01Z,AUTORENEW,1Y,10,USD,,1,
-   example1,foo.example1,2018-11-09T08:00:00Z,CREATE,6M,9.90,EUR,,1,
-   example2,bar.example2,2018-11-09T08:01:01Z,CREATE,1Y,4000,BRL,
-   PREMIUM C,1,
+   REGISTRARID
+   example,nic.example,2018-11-08T08:01:01Z,AUTORENEW,1y,10,USD,,1
+   example1,foo.example1,2018-11-09T08:00:00Z,CREATE,6m,9.90,EUR,,1
+   example2,bar.example2,2018-11-09T08:01:01Z,CREATE,1y,4000,BRL,
+   PREMIUM C,1
    xn--0zwm56d,xn--fsqu00a.xn--0zwm56d,2018-11-10T07:00:00Z,RESTORE,,
-   275,CNY,,1,
+   275,CNY,,1
    xn--0zwm56d,xn--fsqu00a.xn--0zwm56d,2018-11-10T07:00:01Z,RENEWAL,,
-   70,CNY,,1,
-   xn--zckzah,xn--r8jz45g.xn--zckzah,2018-11-11T06:30:00Z,TRANSFER,,
-   1200,JPY,,1,
+   70,CNY,,1
+   xn--zckzah,xn--r8jz45g.xn--zckzah,2018-11-11T06:30:00Z,TRANSFER,1y,
+   1200,JPY,,1
 
-McPherson & Sattler         Expires May 15, 2019                [Page 6]
+McPherson & Sattler         Expires May 29, 2019                [Page 6]
 
 Internet-Draft          Registry Transaction Report        November 2018
    
@@ -311,7 +312,7 @@ Internet-Draft          Registry Transaction Report        November 2018
 
    Add implementation details once available.
    
-McPherson & Sattler         Expires May 15, 2019                [Page 7]
+McPherson & Sattler         Expires May 29, 2019                [Page 7]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -343,8 +344,12 @@ Internet-Draft          Registry Transaction Report        November 2018
               <https://www.rfc-editor.org/info/rfc7942>.
    
 Appendix A.  Change History
+
+A.1.  Change from 00 to 01
+
+   Added acknowledgements. Changed Y to lowercase. Fixed csv examples.
    
-McPherson & Sattler         Expires May 15, 2019                [Page 8]
+McPherson & Sattler         Expires May 29, 2019                [Page 8]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -352,6 +357,8 @@ Appendix B.  Acknowledgements
 
    The authors wish to thank the following persons for their feedback
    and suggestions (sorted alphabetically by company):
+   
+   o Elaine Pruis
 
 Authors' Addresses
 
@@ -369,5 +376,5 @@ Authors' Addresses
    Email: tobias.sattler@me.com
    URI:   https://tobiassattler.com
 
-McPherson & Sattler         Expires May 15, 2019                [Page 9]
+McPherson & Sattler         Expires May 29, 2019                [Page 9]
 
