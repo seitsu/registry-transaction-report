@@ -126,6 +126,9 @@ Internet-Draft          Registry Transaction Report        November 2018
 3.  Report Headings
 
    The first row MUST be the column headings in the following order:
+   
+   SVTRID            Server transaction identifier MUST be assigned
+                     by and MUST be unique to the server.
 
    TLD               It MUST contain the top-level domain name and
                      formatted according section 2.1 of this document.
@@ -153,13 +156,13 @@ Internet-Draft          Registry Transaction Report        November 2018
    
    DESCRIPTION       It MAY contain a free description of the succesful
                      transaction.
-   
-   REGISTRARID       It MUST contain the registrar ID of the succesful
-                     transaction according section 7 of this document.
                      
 McPherson & Sattler         Expires May 29, 2019                [Page 3]
 
 Internet-Draft          Registry Transaction Report        November 2018
+   
+   REGISTRARID       It MUST contain the registrar ID of the succesful
+                     transaction according section 7 of this document.
    
 4.  Transaction Types
 
@@ -237,16 +240,20 @@ Internet-Draft          Registry Transaction Report        November 2018
    
    Filename: example_transactions_2018-11.csv
    
-   TLD,DOMAIN,TIMESTAMP,TRANSACTIONTYPE,PERIOD,FEE,CURRENCY,DESCRIPTION,
-   REGISTRARID
-   example,nic.example,2018-11-08T08:01:01Z,AUTORENEW,1y,10,USD,,1
-   example,foo.example,2018-11-09T08:00:00Z,CREATE,3y,10,USD,,1
-   example,bar.example,2018-11-09T08:01:01Z,CREATE,1y,1000,USD,
-   PREMIUM A,1
-   example,foobar.example,2018-11-10T07:00:00Z,RESTORE,,40,USD,,1
-   example,foobar.example,2018-11-10T07:00:01Z,RENEWAL,,10,USD,,1
-   example,xn--r8jz45g.example,2018-11-11T06:30:00Z,TRANSFER,1y,12.75,
+   SVTRID,TLD,DOMAIN,TIMESTAMP,TRANSACTIONTYPE,PERIOD,FEE,CURRENCY,
+   DESCRIPTION,REGISTRARID
+   54321-XYZ,example,nic.example,2018-11-08T08:01:01Z,AUTORENEW,1y,10,
    USD,,1
+   54322-XYZ,example,foo.example,2018-11-09T08:00:00Z,CREATE,3y,10,USD,,
+   1
+   54323-XYZ,example,bar.example,2018-11-09T08:01:01Z,CREATE,1y,1000,
+   USD,PREMIUM A,1
+   54324-XYZ,example,foobar.example,2018-11-10T07:00:00Z,RESTORE,,40,USD
+   ,,1
+   54325-XYZ,example,foobar.example,2018-11-10T07:00:01Z,RENEWAL,,10,USD
+   ,,1
+   54326-XYZ,example,xn--r8jz45g.example,2018-11-11T06:30:00Z,TRANSFER,
+   1y,12.75,USD,,1
    
 8.2.  Multiple TLDs File Example
 
@@ -255,22 +262,25 @@ Internet-Draft          Registry Transaction Report        November 2018
    
    Filename: example_transactions_2018-11.csv
    
-   TLD,DOMAIN,TIMESTAMP,TRANSACTIONTYPE,PERIOD,FEE,CURRENCY,DESCRIPTION,
-   REGISTRARID
-   example,nic.example,2018-11-08T08:01:01Z,AUTORENEW,1y,10,USD,,1
-   example1,foo.example1,2018-11-09T08:00:00Z,CREATE,6m,9.90,EUR,,1
-   example2,bar.example2,2018-11-09T08:01:01Z,CREATE,1y,4000,BRL,
-   PREMIUM C,1
-   xn--0zwm56d,xn--fsqu00a.xn--0zwm56d,2018-11-10T07:00:00Z,RESTORE,,
-   275,CNY,,1
-   xn--0zwm56d,xn--fsqu00a.xn--0zwm56d,2018-11-10T07:00:01Z,RENEWAL,,
-   70,CNY,,1
-   xn--zckzah,xn--r8jz45g.xn--zckzah,2018-11-11T06:30:00Z,TRANSFER,1y,
-   1200,JPY,,1
-
+   SVTRID,TLD,DOMAIN,TIMESTAMP,TRANSACTIONTYPE,PERIOD,FEE,CURRENCY,
+   DESCRIPTION,REGISTRARID
+   54321-XYZ,example,nic.example,2018-11-08T08:01:01Z,AUTORENEW,1y,10,
+   USD,,1
+   54322-XYZ,example1,foo.example1,2018-11-09T08:00:00Z,CREATE,6m,9.90,
+   EUR,,1
+   54323-XYZ,example2,bar.example2,2018-11-09T08:01:01Z,CREATE,1y,4000,
+   BRL,PREMIUM C,1
+   54324-XYZ,xn--0zwm56d,xn--fsqu00a.xn--0zwm56d,2018-11-10T07:00:00Z,
+   RESTORE,,275,CNY,,1
+   
 McPherson & Sattler         Expires May 29, 2019                [Page 5]
 
 Internet-Draft          Registry Transaction Report        November 2018
+   
+   54325-XYZ,xn--0zwm56d,xn--fsqu00a.xn--0zwm56d,2018-11-10T07:00:01Z,
+   RENEWAL,,70,CNY,,1
+   54326-XYZ,xn--zckzah,xn--r8jz45g.xn--zckzah,2018-11-11T06:30:00Z,
+   TRANSFER,1y,1200,JPY,,1
    
 9.  IANA Considerations
 
@@ -344,7 +354,8 @@ Appendix A.  Change History
 A.1.  Change from 00 to 01
 
    Added acknowledgements. Changed Y to lowercase. Fixed csv examples.
-   Changed security considerations.
+   Changed security considerations. Added SRTRID to identify
+   transactions.
 
 Appendix B.  Acknowledgements
 
