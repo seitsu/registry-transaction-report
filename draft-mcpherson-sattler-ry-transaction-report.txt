@@ -359,7 +359,7 @@ A.1.  Change from 00 to 01
 
    Added acknowledgements. Changed Y to lowercase. Fixed csv examples.
    Changed security considerations. Added SRTRID to identify
-   transactions.
+   transactions. Clarified a successful transaction.
 
 Appendix B.  Acknowledgements
 
