@@ -190,6 +190,10 @@ Internet-Draft          Registry Transaction Report        November 2018
    RESTORE    A successful domain name restore within the report period.
               This event MUST only include the restore fee. Any
               additional renewal fee MUST be independently listed.
+              
+   A successful transaction is also a completed transaction. Therefore,
+   transactions MUST NOT be deleted. If a transaction MUST be cleared, a
+   corresponding counter transaction MUST be made.
 
 5.  Transaction Periods
    
@@ -212,12 +216,12 @@ Internet-Draft          Registry Transaction Report        November 2018
    All transactions MUST have a fee associated. The fee amount, the
    currency and the period MUST be listed separately.
    
-   Fees MUST either be whole numbers or rounded to two decimal places.
-   A period is used as the dividing point.
-   
 McPherson & Sattler         Expires May 29, 2019                [Page 4]
 
 Internet-Draft          Registry Transaction Report        November 2018
+   
+   Fees MUST either be whole numbers or rounded to two decimal places.
+   A period is used as the dividing point.
 
 6.1.  Deviating Fees
 
@@ -270,13 +274,13 @@ Internet-Draft          Registry Transaction Report        November 2018
    EUR,,1
    54323-XYZ,example2,bar.example2,2018-11-09T08:01:01Z,CREATE,1y,4000,
    BRL,PREMIUM C,1
-   54324-XYZ,xn--0zwm56d,xn--fsqu00a.xn--0zwm56d,2018-11-10T07:00:00Z,
-   RESTORE,,275,CNY,,1
-   
+
 McPherson & Sattler         Expires May 29, 2019                [Page 5]
 
 Internet-Draft          Registry Transaction Report        November 2018
-   
+
+   54324-XYZ,xn--0zwm56d,xn--fsqu00a.xn--0zwm56d,2018-11-10T07:00:00Z,
+   RESTORE,,275,CNY,,1
    54325-XYZ,xn--0zwm56d,xn--fsqu00a.xn--0zwm56d,2018-11-10T07:00:01Z,
    RENEWAL,,70,CNY,,1
    54326-XYZ,xn--zckzah,xn--r8jz45g.xn--zckzah,2018-11-11T06:30:00Z,
@@ -327,14 +331,14 @@ Internet-Draft          Registry Transaction Report        November 2018
               , <https://datatracker.ietf.org/doc/draft-mcpherson-
               sattler-registry-report-structure/> (work in
               progress), November 2018
-
-   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
-              Requirement Levels", BCP 14, RFC 2119, March 1997,
-              <https://www.rfc-editor.org/info/rfc2119>.
               
 McPherson & Sattler         Expires May 29, 2019                [Page 6]
 
 Internet-Draft          Registry Transaction Report        November 2018
+
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119, March 1997,
+              <https://www.rfc-editor.org/info/rfc2119>.
 
 12.2.  Informative References
 
