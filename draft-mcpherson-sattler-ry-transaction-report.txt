@@ -1,10 +1,10 @@
 Internet Engineering Task Force                             N. McPherson
 Internet-Draft                                              1&1 IONOS SE
 Intended status: Best Current Practice                T. Sattler, Editor
-Expires: May 24, 2019                                  November 25, 2018
+Expires: May 29, 2019                                  November 30, 2018
 
                        Registry Transaction Report
-            draft-mcpherson-sattler-ry-transaction-report-01
+            draft-mcpherson-sattler-ry-transaction-report-02
 
 Abstract
 
@@ -27,7 +27,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress".
 
-   This Internet-Draft will expire on May 24, 2019.
+   This Internet-Draft will expire on May 29, 2019.
 
 Copyright Notice
 
@@ -44,7 +44,7 @@ Copyright Notice
    the Trust Legal Provisions and are provided without warranty as
    described in the Simplified BSD License.
 
-McPherson & Sattler         Expires May 24, 2019                [Page 1]
+McPherson & Sattler         Expires May 29, 2019                [Page 1]
 
 Internet-Draft          Registry Transaction Report        November 2018
 
@@ -58,7 +58,7 @@ Table of Contents
    3.  Report Headings . . . . . . . . . . . . . . . . . . . . . . .   3
    4.  Transaction Types . . . . . . . . . . . . . . . . . . . . . .   4
    5.  Transaction Periods . . . . . . . . . . . . . . . . . . . . .   4
-   6.  Transaction Fees  . . . . . . . . . . . . . . . . . . . . . .   4
+   6.  Transaction Fees  . . . . . . . . . . . . . . . . . . . . . .   5
      6.1.  Deviating Fees  . . . . . . . . . . . . . . . . . . . . .   5
    7.  Registrar ID  . . . . . . . . . . . . . . . . . . . . . . . .   5
    8.  Example . . . . . . . . . . . . . . . . . . . . . . . . . . .   5
@@ -67,13 +67,14 @@ Table of Contents
    9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   6
    10. Security Considerations . . . . . . . . . . . . . . . . . . .   6
    11. Implementation Status . . . . . . . . . . . . . . . . . . . .   6
-   12. References  . . . . . . . . . . . . . . . . . . . . . . . . .   6
-     12.1.  Normative References   . . . . . . . . . . . . . . . . .   6
+   12. References  . . . . . . . . . . . . . . . . . . . . . . . . .   7
+     12.1.  Normative References   . . . . . . . . . . . . . . . . .   7
      12.2.  Informative References   . . . . . . . . . . . . . . . .   7
    Appendix A.  Change History . . . . . . . . . . . . . . . . . . .   7
      A.1.  Change from 00 to 01  . . . . . . . . . . . . . . . . . .   7
-   Appendix B.  Acknowledgements . . . . . . . . . . . . . . . . . .   7
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   7
+     A.2.  Change from 01 to 02  . . . . . . . . . . . . . . . . . .   7
+   Appendix B.  Acknowledgements . . . . . . . . . . . . . . . . . .   8
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   8
 
 1.  Introduction
 
@@ -99,7 +100,7 @@ Table of Contents
    document are to be interpreted as described in [RFC2119] when
    specified in their uppercase forms.
    
-McPherson & Sattler         Expires May 24, 2019                [Page 2]
+McPherson & Sattler         Expires May 29, 2019                [Page 2]
 
 Internet-Draft          Registry Transaction Report        November 2018
    
@@ -130,39 +131,43 @@ Internet-Draft          Registry Transaction Report        November 2018
    SVTRID            Server transaction identifier MUST be assigned
                      by and MUST be unique to the server.
 
-   TLD               It MUST contain the top-level domain name and
-                     formatted according section 2.1 of this document.
+   TLD               It MUST contain the top-level domain name formatted
+                     according to section 2.1 of this document.
    
    DOMAIN            It MUST contain the domain name formatted according
-                     section 2.1 of this document.
+                     to section 2.1 of this document.
    
    TIMESTAMP         It MUST contain the timestamp of the successful
-                     transaction formatted according section 2.2 of
+                     transaction formatted according to section 2.2 of
                      this document.
    
    TRANSACTIONTYPE   It MUST contain the type of the successful
-                     transaction according section 4 of this document.
+                     transaction according to section 4 of this
+                     document.
    
-   PERIOD            It MUST contain the period of the the successful
-                     transaction according section 5 of this document.
-                     It MAY be empty if no period is assign to the
-                     transaction.
+   PERIOD            It SHOULD contain the Period of the the successful
+                     transaction according to section 5 of this
+                     document. It MAY be empty if no Period is assigned
+                     to the transaction.
    
    FEE               It MUST contain the fee of the successful 
-                     transaction according section 6 of this document.
+                     transaction according to section 6 of this
+                     document.
    
-   CURRENCY          It MUST contain the currency of the succesful
-                     transaction according section 2.4 of this document.
-   
-   DESCRIPTION       It MAY contain a free description of the succesful
-                     transaction.
+   CURRENCY          It MUST contain the currency of the successful
+                     transaction according to section 2.4 of this
+                     document.
                      
-McPherson & Sattler         Expires May 24, 2019                [Page 3]
+McPherson & Sattler         Expires May 29, 2019                [Page 3]
 
 Internet-Draft          Registry Transaction Report        November 2018
    
+   DESCRIPTION       It MAY contain a free description of the successful
+                     transaction.
+   
    REGISTRARID       It MUST contain the registrar ID of the succesful
-                     transaction according section 7 of this document.
+                     transaction according to section 7 of this
+                     document.
    
 4.  Transaction Types
 
@@ -197,43 +202,43 @@ Internet-Draft          Registry Transaction Report        November 2018
 
 5.  Transaction Periods
    
-   Transaction Types usually occur in periods of 1 to 10 years,
-   sometimes there are monthly periods. Therefore, each transaction MUST
-   have a period associated.
+   Transaction Types usually occur in Periods of 1 to 10 years,
+   sometimes there are monthly periods. Therefore, each transaction
+   SHOULD have a Period associated. It MAY be empty if no Period is
+   assigned to the transaction.
    
    The format MUST be in the format <integer><character>, where
-   <integer> MUST be between 1 and 99, without any leading zero, and
-   <charter> MUST be either 'y' for years or 'm' for months.
+   <integer> MUST be unsigned and between 1 and 65535, without any
+   leading zero, and <character> MUST be either 'y' for years or 'm' for
+   months.
    
    If the number of months results in a full year, then the full year
    MUST be used, e.g. instead of 12m or 24m, it should be 1y
    respectively 2y.
    
-   The period MAY be empty if no period is assign to the transaction.
-   
-6.  Transaction Fees
-
-   All transactions MUST have a fee associated. The fee amount, the
-   currency and the period MUST be listed separately.
-   
-McPherson & Sattler         Expires May 24, 2019                [Page 4]
+McPherson & Sattler         Expires May 29, 2019                [Page 4]
 
 Internet-Draft          Registry Transaction Report        November 2018
    
+6.  Transaction Fees
+
+   All transactions MUST have a Fee associated. The fee amount, the
+   currency and the period MUST be listed separately.
+   
    Fees MUST either be whole numbers or rounded to two decimal places.
-   A period is used as the dividing point.
+   A period (.) is used as the dividing point.
 
 6.1.  Deviating Fees
 
-   If a domain name incurs a non-standard premium fee, a description
-   of the price category SHOULD be given.
+   If a domain name incurs a premium fee, that is not the standard price
+   for the TLD, a description of the price category SHOULD be given.
 
 7.  Registrar ID
 
-   A unique registrar id MUST be listed, with each transaction. Those
-   IDs MUST be according the IANA registrars ids (https://www.iana.org/
+   A unique registrar ID MUST be listed, with each transaction. Those
+   IDs MUST be according the IANA registrar IDs (https://www.iana.org/
    assignments/registrar-ids/registrar-ids.xhtml) where applicable,
-   otherwise another unique registrar id MUST be used.
+   otherwise another unique registrar ID MUST be used.
 
 8.  Example
 
@@ -266,6 +271,10 @@ Internet-Draft          Registry Transaction Report        November 2018
    
    Filename: example_transactions_2018-11.csv.gz
    
+McPherson & Sattler         Expires May 29, 2019                [Page 5]
+
+Internet-Draft          Registry Transaction Report        November 2018
+   
    SVTRID,TLD,DOMAIN,TIMESTAMP,TRANSACTIONTYPE,PERIOD,FEE,CURRENCY,
    DESCRIPTION,REGISTRARID
    54321-XYZ,example,nic.example,2018-11-08T08:01:01Z,AUTORENEW,1y,10,
@@ -274,11 +283,6 @@ Internet-Draft          Registry Transaction Report        November 2018
    EUR,,1
    54323-XYZ,example2,bar.example2,2018-11-09T08:01:01Z,CREATE,1y,4000,
    BRL,PREMIUM C,1
-
-McPherson & Sattler         Expires May 24, 2019                [Page 5]
-
-Internet-Draft          Registry Transaction Report        November 2018
-
    54324-XYZ,xn--0zwm56d,xn--fsqu00a.xn--0zwm56d,2018-11-10T07:00:00Z,
    RESTORE,,275,CNY,,1
    54325-XYZ,xn--0zwm56d,xn--fsqu00a.xn--0zwm56d,2018-11-10T07:00:01Z,
@@ -321,6 +325,10 @@ Internet-Draft          Registry Transaction Report        November 2018
    they see fit".
 
    Add implementation details once available.
+   
+McPherson & Sattler         Expires May 29, 2019                [Page 6]
+
+Internet-Draft          Registry Transaction Report        November 2018
 
 12.  References
 
@@ -331,10 +339,6 @@ Internet-Draft          Registry Transaction Report        November 2018
               , <https://datatracker.ietf.org/doc/draft-mcpherson-
               sattler-registry-report-structure/> (work in
               progress), November 2018
-              
-McPherson & Sattler         Expires May 24, 2019                [Page 6]
-
-Internet-Draft          Registry Transaction Report        November 2018
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119, March 1997,
@@ -360,6 +364,15 @@ A.1.  Change from 00 to 01
    Added acknowledgements. Changed Y to lowercase. Fixed csv examples.
    Changed security considerations. Added SRTRID to identify
    transactions. Clarified successful transaction.
+   
+A.2.  Change from 01 to 02
+
+   Changed Period from MUST to SHOULD. Fixed numerous typos. Changed
+   limit for Period from 1-99 to unsigned 16 bit integer.
+   
+McPherson & Sattler         Expires May 29, 2019                [Page 7]
+
+Internet-Draft          Registry Transaction Report        November 2018
 
 Appendix B.  Acknowledgements
 
@@ -386,5 +399,5 @@ Authors' Addresses
    Email: tobias.sattler@me.com
    URI:   https://tobiassattler.com
 
-McPherson & Sattler         Expires May 24, 2019                [Page 7]
+McPherson & Sattler         Expires May 29, 2019                [Page 8]
 
