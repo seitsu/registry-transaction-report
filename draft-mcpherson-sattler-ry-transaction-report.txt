@@ -145,10 +145,10 @@ Internet-Draft          Registry Transaction Report        November 2018
                      transaction according to section 4 of this
                      document.
    
-   PERIOD            It SHOULD contain the Period of the the successful
-                     transaction according to section 5 of this
-                     document. It MAY be empty if no Period is assigned
-                     to the transaction.
+   PERIOD            It MUST either contain the Period of the the
+                     successful transaction according to section 5 of
+                     this document or MUST be empty if no Period is
+                     assigned to the transaction.
    
    FEE               It MUST contain the fee of the successful 
                      transaction according to section 6 of this
@@ -204,8 +204,8 @@ Internet-Draft          Registry Transaction Report        November 2018
    
    Transaction Types usually occur in Periods of 1 to 10 years,
    sometimes there are monthly periods. Therefore, each transaction
-   SHOULD have a Period associated. It MAY be empty if no Period is
-   assigned to the transaction.
+   MUST either have a Period associated or it MUST be empty if no Period
+   is assigned to the transaction.
    
    The format MUST be in the format <integer><character>, where
    <integer> MUST be unsigned and between 1 and 65535, without any
@@ -367,8 +367,8 @@ A.1.  Change from 00 to 01
    
 A.2.  Change from 01 to 02
 
-   Changed Period from MUST to SHOULD. Fixed numerous typos. Changed
-   limit for Period from 1-99 to unsigned 16 bit integer.
+   Clarified the Period. Fixed numerous typos. Changed limit for Period
+   from 1-99 to unsigned 16 bit integer.
    
 McPherson & Sattler         Expires May 29, 2019                [Page 7]
 
