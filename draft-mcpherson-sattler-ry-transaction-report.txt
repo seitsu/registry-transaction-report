@@ -1,7 +1,7 @@
 Internet Engineering Task Force                             N. McPherson
 Internet-Draft                                              1&1 IONOS SE
 Intended status: Best Current Practice                T. Sattler, Editor
-Expires: May 29, 2019                                  November 30, 2018
+Expires: June 2, 2019                                   December 3, 2018
 
                        Registry Transaction Report
             draft-mcpherson-sattler-ry-transaction-report-02
@@ -27,7 +27,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress".
 
-   This Internet-Draft will expire on May 29, 2019.
+   This Internet-Draft will expire on June 2, 2019.
 
 Copyright Notice
 
@@ -44,9 +44,9 @@ Copyright Notice
    the Trust Legal Provisions and are provided without warranty as
    described in the Simplified BSD License.
 
-McPherson & Sattler         Expires May 29, 2019                [Page 1]
+McPherson & Sattler         Expires June 2, 2019                [Page 1]
 
-Internet-Draft          Registry Transaction Report        November 2018
+Internet-Draft          Registry Transaction Report        December 2018
 
 Table of Contents
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
@@ -100,9 +100,9 @@ Table of Contents
    document are to be interpreted as described in [RFC2119] when
    specified in their uppercase forms.
    
-McPherson & Sattler         Expires May 29, 2019                [Page 2]
+McPherson & Sattler         Expires June 2, 2019                [Page 2]
 
-Internet-Draft          Registry Transaction Report        November 2018
+Internet-Draft          Registry Transaction Report        December 2018
    
 2.1.  Internationalized Domain Names
 
@@ -158,9 +158,9 @@ Internet-Draft          Registry Transaction Report        November 2018
                      transaction according to section 2.4 of this
                      document.
                      
-McPherson & Sattler         Expires May 29, 2019                [Page 3]
+McPherson & Sattler         Expires June 2, 2019                [Page 3]
 
-Internet-Draft          Registry Transaction Report        November 2018
+Internet-Draft          Registry Transaction Report        December 2018
    
    DESCRIPTION       It MAY contain a free description of the successful
                      transaction.
@@ -216,9 +216,9 @@ Internet-Draft          Registry Transaction Report        November 2018
    MUST be used, e.g. instead of 12m or 24m, it should be 1y
    respectively 2y.
    
-McPherson & Sattler         Expires May 29, 2019                [Page 4]
+McPherson & Sattler         Expires June 2, 2019                [Page 4]
 
-Internet-Draft          Registry Transaction Report        November 2018
+Internet-Draft          Registry Transaction Report        December 2018
    
 6.  Transaction Fees
 
@@ -271,9 +271,9 @@ Internet-Draft          Registry Transaction Report        November 2018
    
    Filename: example_transactions_2018-11.csv.gz
    
-McPherson & Sattler         Expires May 29, 2019                [Page 5]
+McPherson & Sattler         Expires June 2, 2019                [Page 5]
 
-Internet-Draft          Registry Transaction Report        November 2018
+Internet-Draft          Registry Transaction Report        December 2018
    
    SVTRID,TLD,DOMAIN,TIMESTAMP,TRANSACTIONTYPE,PERIOD,FEE,CURRENCY,
    DESCRIPTION,REGISTRARID
@@ -326,9 +326,9 @@ Internet-Draft          Registry Transaction Report        November 2018
 
    Add implementation details once available.
    
-McPherson & Sattler         Expires May 29, 2019                [Page 6]
+McPherson & Sattler         Expires June 2, 2019                [Page 6]
 
-Internet-Draft          Registry Transaction Report        November 2018
+Internet-Draft          Registry Transaction Report        December 2018
 
 12.  References
 
@@ -370,9 +370,9 @@ A.2.  Change from 01 to 02
    Clarified the Period. Fixed numerous typos. Changed limit for Period
    from 1-99 to unsigned 16 bit integer.
    
-McPherson & Sattler         Expires May 29, 2019                [Page 7]
+McPherson & Sattler         Expires June 2, 2019                [Page 7]
 
-Internet-Draft          Registry Transaction Report        November 2018
+Internet-Draft          Registry Transaction Report        December 2018
 
 Appendix B.  Acknowledgements
 
@@ -399,5 +399,5 @@ Authors' Addresses
    Email: tobias.sattler@me.com
    URI:   https://tobiassattler.com
 
-McPherson & Sattler         Expires May 29, 2019                [Page 8]
+McPherson & Sattler         Expires June 2, 2019                [Page 8]
 
