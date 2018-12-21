@@ -149,6 +149,9 @@ Internet-Draft          Registry Transaction Report        December 2018
                      successful transaction according to section 5 of
                      this document or MUST be empty if no Period is
                      assigned to the transaction.
+
+   TERM		     It MUST contain the unit of time noted in section 
+                     5 of this document.
    
    FEE               It MUST contain the fee of the successful 
                      transaction according to section 6 of this
@@ -162,43 +165,55 @@ McPherson & Sattler         Expires June 2, 2019                [Page 3]
 
 Internet-Draft          Registry Transaction Report        December 2018
    
-   DESCRIPTION       It MAY contain a free description of the successful
-                     transaction.
-   
+    
    REGISTRARID       It MUST contain the registrar ID of the succesful
                      transaction according to section 7 of this
                      document.
    
+   DESCRIPTION       It MAY contain a free description of the successful
+                     transaction.
+   
 4.  Transaction Types
 
-   Each transaction MUST be assigned to a type. Those type MUST either
+   Each standard transaction MUST be assigned to a type.Standard transactions
+   are considered to be create,renewal,autorenewal,transfer,trade,update,restore
+   and registrylock. Those standard transaction types MUST either
    be 'CREATE', 'RENEWAL', 'AUTORENEW', 'TRANSFER', 'TRADE', 'UPDATE'
-   or 'RESTORE'.
+   'RESTORE', or REGISTRYLOCK.
 
-   CREATE     A successful domain create within the report period.
+   CREATE       A successful domain create within the report period.
    
-   RENEWAL    A successful explicit domain name renewal executed by the
-              domain name registrar within the report period.
+   RENEWAL      A successful explicit domain name renewal executed by the
+                domain name registrar within the report period.
             
-   AUTORENEW  A successful domain name auto-renewal by the domain name
-              registry within the report period.
+   AUTORENEW    A successful domain name auto-renewal by the domain name
+                registry within the report period.
               
-   TRANSFER   A successful domain name transfer within the report
-              period.
+   TRANSFER     A successful domain name transfer within the report
+                period.
               
-   TRADE      A successful domain name trade within the report
-              period.
+   TRADE        A successful domain name trade within the report
+                period.
               
-   UPDATE     A successful billable domain name update within the report
-              period.
+   UPDATE       A successful billable domain name update within the report
+                period.
               
-   RESTORE    A successful domain name restore within the report period.
-              This event MUST only include the restore fee. Any
-              additional renewal fee MUST be independently listed.
+   RESTORE      A successful domain name restore within the report period.
+                This event MUST only include the restore fee. Any
+                additional renewal fee MUST be independently listed.
+  
+  REGISTRYLOCK  A successful billable registry lock applied to domain name
+                within the report period.
               
    A successful transaction is also a completed transaction. Therefore,
    transactions MUST NOT be deleted. If a transaction MUST be cleared, a
    corresponding counter transaction MUST be made.
+
+   4.1. Non-Standard Transactions
+
+   Non-standard transactions MAY be listed in the report and MAY
+   receive a custom Transaction Type. A custom Transaction Type MUST have
+   a corresponding description in the Description Field
 
 5.  Transaction Periods
    
@@ -207,14 +222,16 @@ Internet-Draft          Registry Transaction Report        December 2018
    MUST either have a Period associated or it MUST be empty if no Period
    is assigned to the transaction.
    
-   The format MUST be in the format <integer><character>, where
+   The Period format MUST be in the format <integer>, where
    <integer> MUST be unsigned and between 1 and 65535, without any
-   leading zero, and <character> MUST be either 'y' for years or 'm' for
-   months.
+   leading zero
+
+   The Term format MUST be in the format <character> and MUST be either 
+   'y' for years or 'm' for months.
    
    If the number of months results in a full year, then the full year
-   MUST be used, e.g. instead of 12m or 24m, it should be 1y
-   respectively 2y.
+   MUST be used, e.g. instead of 12,m or 24,m, it should be 1,y
+   respectively 2,y.
    
 McPherson & Sattler         Expires June 2, 2019                [Page 4]
 
@@ -249,20 +266,20 @@ Internet-Draft          Registry Transaction Report        December 2018
    
    Filename: example_transactions_2018-11.csv.gz
    
-   SVTRID,TLD,DOMAIN,TIMESTAMP,TRANSACTIONTYPE,PERIOD,FEE,CURRENCY,
-   DESCRIPTION,REGISTRARID
-   54321-XYZ,example,nic.example,2018-11-08T08:01:01Z,AUTORENEW,1y,10,
-   USD,,1
-   54322-XYZ,example,foo.example,2018-11-09T08:00:00Z,CREATE,3y,10,USD,,
-   1
-   54323-XYZ,example,bar.example,2018-11-09T08:01:01Z,CREATE,1y,1000,
-   USD,PREMIUM A,1
-   54324-XYZ,example,foobar.example,2018-11-10T07:00:00Z,RESTORE,,40,USD
-   ,,1
-   54325-XYZ,example,foobar.example,2018-11-10T07:00:01Z,RENEWAL,,10,USD
-   ,,1
+   SVTRID,TLD,DOMAIN,TIMESTAMP,TRANSACTIONTYPE,PERIOD,TERM,FEE,CURRENCY,
+   REGISTRARID,DESCRIPTION
+   54321-XYZ,example,nic.example,2018-11-08T08:01:01Z,AUTORENEW,1,y,10,
+   USD,1,
+   54322-XYZ,example,foo.example,2018-11-09T08:00:00Z,CREATE,3,y,10,USD,
+   1,
+   54323-XYZ,example,bar.example,2018-11-09T08:01:01Z,CREATE,1,y,1000,
+   USD,1,PREMIUM A
+   54324-XYZ,example,foobar.example,2018-11-10T07:00:00Z,RESTORE,,,40,USD
+   ,1,
+   54325-XYZ,example,foobar.example,2018-11-10T07:00:01Z,RENEWAL,,,10,USD
+   ,1,
    54326-XYZ,example,xn--r8jz45g.example,2018-11-11T06:30:00Z,TRANSFER,
-   1y,12.75,USD,,1
+   1,y,12.75,USD,1,
    
 8.2.  Multiple TLDs File Example
 
@@ -274,21 +291,21 @@ Internet-Draft          Registry Transaction Report        December 2018
 McPherson & Sattler         Expires June 2, 2019                [Page 5]
 
 Internet-Draft          Registry Transaction Report        December 2018
-   
-   SVTRID,TLD,DOMAIN,TIMESTAMP,TRANSACTIONTYPE,PERIOD,FEE,CURRENCY,
-   DESCRIPTION,REGISTRARID
-   54321-XYZ,example,nic.example,2018-11-08T08:01:01Z,AUTORENEW,1y,10,
-   USD,,1
-   54322-XYZ,example1,foo.example1,2018-11-09T08:00:00Z,CREATE,6m,9.90,
-   EUR,,1
-   54323-XYZ,example2,bar.example2,2018-11-09T08:01:01Z,CREATE,1y,4000,
-   BRL,PREMIUM C,1
+  
+   SVTRID,TLD,DOMAIN,TIMESTAMP,TRANSACTIONTYPE,PERIOD,TERM,FEE,CURRENCY,
+   REGISTRARID,DESCRIPTION
+   54321-XYZ,example,nic.example,2018-11-08T08:01:01Z,AUTORENEW,1,y,10,
+   USD,1,
+   54322-XYZ,example1,foo.example1,2018-11-09T08:00:00Z,CREATE,6,m,9.90,
+   EUR,1,
+   54323-XYZ,example2,bar.example2,2018-11-09T08:01:01Z,CREATE,1,y,4000,
+   BRL,1,PREMIUM C
    54324-XYZ,xn--0zwm56d,xn--fsqu00a.xn--0zwm56d,2018-11-10T07:00:00Z,
-   RESTORE,,275,CNY,,1
+   RESTORE,,275,CNY,1,
    54325-XYZ,xn--0zwm56d,xn--fsqu00a.xn--0zwm56d,2018-11-10T07:00:01Z,
-   RENEWAL,,70,CNY,,1
+   RENEWAL,,70,CNY,1,
    54326-XYZ,xn--zckzah,xn--r8jz45g.xn--zckzah,2018-11-11T06:30:00Z,
-   TRANSFER,1y,1200,JPY,,1
+   TRANSFER,1,y,1200,JPY,1,
    
 9.  IANA Considerations
 
@@ -369,6 +386,11 @@ A.2.  Change from 01 to 02
 
    Clarified the Period. Fixed numerous typos. Changed limit for Period
    from 1-99 to unsigned 16 bit integer.
+
+A.3. Change from 02 to 03
+  Added Term column to further clarify period. Defined Standard 
+  Transaction types. Added custom Transaction Types. Changed Column 
+  order so that DESCRIPTION at end.
    
 McPherson & Sattler         Expires June 2, 2019                [Page 7]
 
@@ -382,6 +404,8 @@ Appendix B.  Acknowledgements
    o Jeff Yeh, Brandma
    o Elaine Pruis, Domain Research
    o Gaurav Vedi, Dominion Registries
+   o Jody Kolker, GoDaddy
+   o Roger Carney, GoDaddy
 
 Authors' Addresses
 
