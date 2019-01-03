@@ -1,16 +1,15 @@
 Internet Engineering Task Force                             N. McPherson
 Internet-Draft                                              1&1 IONOS SE
 Intended status: Best Current Practice                T. Sattler, Editor
-Expires: June 30, 2019                                 December 31, 2018
+Expires: July 30, 2019                                  January 31, 2019
 
-                       Registry Transaction Report
-            draft-mcpherson-sattler-ry-transaction-report-03
+                            Transaction Report
+              draft-mcpherson-sattler-transaction-report-00
 
 Abstract
 
-   This document describes the content of a transaction report based on
-   the registry report structure and delivered by the registry reporting
-   repository.
+   This document describes the content of a Transaction Report based on
+   the Report Structure and delivered by the Reporting Repository.
 
 Status of This Memo
 
@@ -27,11 +26,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress".
 
-   This Internet-Draft will expire on June 30, 2019.
+   This Internet-Draft will expire on July 30, 2019.
 
 Copyright Notice
 
-   Copyright (c) 2018 IETF Trust and the persons identified as the
+   Copyright (c) 2019 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -44,9 +43,9 @@ Copyright Notice
    the Trust Legal Provisions and are provided without warranty as
    described in the Simplified BSD License.
 
-McPherson & Sattler         Expires June 30, 2019               [Page 1]
+McPherson & Sattler         Expires July 30, 2019               [Page 1]
 
-Internet-Draft          Registry Transaction Report        December 2018
+Internet-Draft               Transaction Report             January 2019
 
 Table of Contents
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
@@ -75,7 +74,7 @@ Table of Contents
    Appendix A.  Change History . . . . . . . . . . . . . . . . . . .   8
      A.1.  Change from 00 to 01  . . . . . . . . . . . . . . . . . .   8
      A.2.  Change from 01 to 02  . . . . . . . . . . . . . . . . . .   8
-     A.3.  Change from 02 to 03  . . . . . . . . . . . . . . . . . .   8
+     A.3.  Change from 02 to TXN 00  . . . . . . . . . . . . . . . .   8
    Appendix B.  Acknowledgements . . . . . . . . . . . . . . . . . .   8
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   8
 
@@ -85,14 +84,14 @@ Table of Contents
    reports and documents that their registrars require on a daily,
    weekly and monthly basis. These most commonly include transaction
    reports, as well as lists containing currently unavailable domains
-   and current premium domains. These reports are critical for
+   and current premium domain fees. These reports are critical for
    registrars' businesses and play an important role in accounting and
    operations processes as well as in sales and marketing activities.
    In the current set-up registrars must download these reports from
    each registry's intranet in a different manner according to each
    registry's own document management set up.
    
-   This document describes the content of a transaction report based on
+   This document describes the content of a Transaction Report based on
    the [I-D.mcpherson-sattler-registry-report-structure] and delivered
    by the [I-D.mcpherson-sattler-registry-reporting-repo].
 
@@ -103,9 +102,9 @@ Table of Contents
    document are to be interpreted as described in [RFC2119] when
    specified in their uppercase forms.
    
-McPherson & Sattler         Expires June 30, 2019               [Page 2]
+McPherson & Sattler         Expires July 30, 2019               [Page 2]
 
-Internet-Draft          Registry Transaction Report        December 2018
+Internet-Draft               Transaction Report             January 2019
    
 2.1.  Internationalized Domain Names
 
@@ -160,9 +159,9 @@ Internet-Draft          Registry Transaction Report        December 2018
                      transaction according to section 6 of this
                      document.
                      
-McPherson & Sattler         Expires June 30, 2019               [Page 3]
+McPherson & Sattler         Expires July 30, 2019               [Page 3]
 
-Internet-Draft          Registry Transaction Report        December 2018
+Internet-Draft               Transaction Report             January 2019
    
    CURRENCY          It MUST contain the currency of the successful
                      transaction according to section 2.4 of this
@@ -219,9 +218,9 @@ Internet-Draft          Registry Transaction Report        December 2018
    Non-Standard Transactions MAY be listed in the report and MAY receive
    a custom type, but it MUST have a corresponding description in the
    
-McPherson & Sattler         Expires June 30, 2019               [Page 4]
+McPherson & Sattler         Expires July 30, 2019               [Page 4]
 
-Internet-Draft          Registry Transaction Report        December 2018
+Internet-Draft               Transaction Report             January 2019
    
    description column.
 
@@ -277,9 +276,9 @@ Internet-Draft          Registry Transaction Report        December 2018
    54321-XYZ,example,nic.example,2018-11-08T08:01:01Z,AUTORENEW,1,y,10,
    USD,1,
    
-McPherson & Sattler         Expires June 30, 2019               [Page 5]
+McPherson & Sattler         Expires July 30, 2019               [Page 5]
 
-Internet-Draft          Registry Transaction Report        December 2018
+Internet-Draft               Transaction Report             January 2019
    
    54322-XYZ,example,foo.example,2018-11-09T08:00:00Z,CREATE,3,y,10,USD,
    1,
@@ -328,9 +327,9 @@ Internet-Draft          Registry Transaction Report        December 2018
    Note to RFC Editor: Please remove this section and the reference to
    [RFC7942] before publication.
    
-McPherson & Sattler         Expires June 30, 2019               [Page 6]
+McPherson & Sattler         Expires July 30, 2019               [Page 6]
 
-Internet-Draft          Registry Transaction Report        December 2018
+Internet-Draft               Transaction Report             January 2019
 
    This section records the status of known implementations of the
    protocol defined by this specification at the time of posting of this
@@ -381,9 +380,9 @@ Internet-Draft          Registry Transaction Report        December 2018
               7942, July 2016,
               <https://www.rfc-editor.org/info/rfc7942>.
               
-McPherson & Sattler         Expires June 30, 2019               [Page 7]
+McPherson & Sattler         Expires July 30, 2019               [Page 7]
 
-Internet-Draft          Registry Transaction Report        December 2018
+Internet-Draft               Transaction Report             January 2019
    
 Appendix A.  Change History
 
@@ -398,10 +397,10 @@ A.2.  Change from 01 to 02
    Clarified the Period. Fixed numerous typos. Changed limit for Period
    from 1-99 to unsigned 16 bit integer.
 
-A.3.  Change from 02 to 03
-  Added Term column to further clarify Period. Defined Standard 
-  Transaction Types. Added Non-Standard Transaction Types. Changed
-  Column order so that DESCRIPTION is at end.
+A.3.  Change from 02 to TXN 00
+  Changed draft name. Added Term column to further clarify Period.
+  Defined Standard  Transaction Types. Added Non-Standard Transaction
+  Types. Changed Column order so that DESCRIPTION is at end.
 
 Appendix B.  Acknowledgements
 
@@ -430,5 +429,5 @@ Authors' Addresses
    Email: tobias.sattler@me.com
    URI:   https://tobiassattler.com
 
-McPherson & Sattler         Expires June 30, 2019               [Page 8]
+McPherson & Sattler         Expires July 30, 2019               [Page 8]
 
