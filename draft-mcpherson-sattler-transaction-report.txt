@@ -1,10 +1,10 @@
 Internet Engineering Task Force                             N. McPherson
 Internet-Draft                                              1&1 IONOS SE
 Intended status: Best Current Practice                T. Sattler, Editor
-Expires: July 28, 2019                                  January 29, 2019
+Expires: September 23, 2019                               March 24, 2019
 
                             Transaction Report
-              draft-mcpherson-sattler-transaction-report-00
+              draft-mcpherson-sattler-transaction-report-01
 
 Abstract
 
@@ -26,7 +26,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress".
 
-   This Internet-Draft will expire on July 28, 2019.
+   This Internet-Draft will expire on September 23, 2019.
 
 Copyright Notice
 
@@ -43,13 +43,13 @@ Copyright Notice
    the Trust Legal Provisions and are provided without warranty as
    described in the Simplified BSD License.
 
-McPherson & Sattler         Expires July 28, 2019               [Page 1]
+McPherson & Sattler       Expires September 23, 2019            [Page 1]
 
-Internet-Draft               Transaction Report             January 2019
+Internet-Draft               Transaction Report               March 2019
 
 Table of Contents
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
-   2.  Terminology and Definitions . . . . . . . . . . . . . . . . .   2
+   2.  Terminology and Definitions . . . . . . . . . . . . . . . . .   3
      2.1.  Internationalized Domain Names  . . . . . . . . . . . . .   3
      2.2.  Dates and Times . . . . . . . . . . . . . . . . . . . . .   3
      2.3.  Character Encoding  . . . . . . . . . . . . . . . . . . .   3
@@ -57,7 +57,7 @@ Table of Contents
    3.  Report Headings . . . . . . . . . . . . . . . . . . . . . . .   3
    4.  Transaction Types . . . . . . . . . . . . . . . . . . . . . .   4
      4.1.  Standard Transaction Types  . . . . . . . . . . . . . . .   4
-     4.2.  Non-Standard Transaction Types  . . . . . . . . . . . . .   4
+     4.2.  Non-Standard Transaction Types  . . . . . . . . . . . . .   5
    5.  Transaction Periods . . . . . . . . . . . . . . . . . . . . .   5
    6.  Transaction Fees  . . . . . . . . . . . . . . . . . . . . . .   5
      6.1.  Deviating Fees  . . . . . . . . . . . . . . . . . . . . .   5
@@ -75,25 +75,30 @@ Table of Contents
      A.1.  Change from 00 to 01  . . . . . . . . . . . . . . . . . .   8
      A.2.  Change from 01 to 02  . . . . . . . . . . . . . . . . . .   8
      A.3.  Change from 02 to TXN 00  . . . . . . . . . . . . . . . .   8
+     A.4.  Change from TXN 00 to TXN 01  . . . . . . . . . . . . . .   8
    Appendix B.  Acknowledgements . . . . . . . . . . . . . . . . . .   8
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   8
 
 1.  Introduction
 
-   Modern top-level domain registries provide a number of detailed
-   reports and documents that their registrars require on a daily,
-   weekly and monthly basis. These most commonly include transaction
-   reports, as well as lists containing currently unavailable domains
-   and current premium domain fees. These reports are critical for
-   registrars' businesses and play an important role in accounting and
-   operations processes as well as in sales and marketing activities.
-   In the current set-up registrars must download these reports from
-   each registry's intranet in a different manner according to each
-   registry's own document management set up.
+   Modern top-level domain registries provide many detailed reports and
+   documents that their registrars require on a daily, weekly and
+   monthly basis. These most commonly include transaction reports, as
+   well as lists containing currently unavailable domains and current
+   premium domain fees. These reports are critical for registrars'
+   businesses and play an important role in accounting and operations
+   processes as well as in sales and marketing activities. In the
+   current set-up, registrars must download these reports from each
+   registry's intranet differently according to each registry's document
+   management set up.
    
    This document describes the content of a Transaction Report based on
    the [I-D.mcpherson-sattler-report-structure] and delivered
    by the [I-D.mcpherson-sattler-reporting-repository].
+   
+McPherson & Sattler       Expires September 23, 2019            [Page 2]
+
+Internet-Draft               Transaction Report               March 2019
 
 2.  Terminology and Definitions
 
@@ -101,10 +106,6 @@ Table of Contents
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
    document are to be interpreted as described in [RFC2119] when
    specified in their uppercase forms.
-   
-McPherson & Sattler         Expires July 28, 2019               [Page 2]
-
-Internet-Draft               Transaction Report             January 2019
    
 2.1.  Internationalized Domain Names
 
@@ -147,10 +148,14 @@ Internet-Draft               Transaction Report             January 2019
                      transaction according to section 4 of this
                      document.
    
-   PERIOD            It MUST either contain the Period of the the
-                     successful transaction according to section 5 of
-                     this document or MUST be empty if no Period is
-                     assigned to the transaction.
+   PERIOD            It MUST either contain the Period of the successful
+                     transaction according to section 5 of this document
+                     or MUST be empty if no Period is assigned to the
+                     operation.
+                     
+McPherson & Sattler       Expires September 23, 2019            [Page 3]
+
+Internet-Draft               Transaction Report               March 2019
 
    TERM              It MUST contain the unit of the Period noted
                      according to section 5 of this document.
@@ -158,10 +163,6 @@ Internet-Draft               Transaction Report             January 2019
    FEE               It MUST contain the fee of the successful 
                      transaction according to section 6 of this
                      document.
-                     
-McPherson & Sattler         Expires July 28, 2019               [Page 3]
-
-Internet-Draft               Transaction Report             January 2019
    
    CURRENCY          It MUST contain the currency of the successful
                      transaction according to section 2.4 of this
@@ -180,7 +181,7 @@ Internet-Draft               Transaction Report             January 2019
    Transactions and Non-Standard Transactions.
    
    A successful transaction is also a completed transaction. Therefore,
-   transactions MUST NOT be deleted. If a transaction MUST be cleared, a
+   transactions MUST NOT be deleted. If a operation MUST be cleared, a
    corresponding counter transaction MUST be made.
 
 4.1.  Standard Transaction Types
@@ -188,48 +189,47 @@ Internet-Draft               Transaction Report             January 2019
    Standard transactions are considered to be CREATE, RENEWAL,
    AUTORENEW, TRANSFER, TRADE, UPDATE, RESTORE and REGISTRYLOCK.
 
-   CREATE        A successful domain create within the report period.
+   CREATE        A successful domain create within the reporting period.
    
    RENEWAL       A successful explicit domain name renewal executed by
-                 the domain name registrar within the report period.
+                 the domain name registrar within the reporting period.
             
    AUTORENEW     A successful domain name auto-renewal by the domain
-                 name registry within the report period.
+                 name registry within the reporting period.
               
-   TRANSFER      A successful domain name transfer within the report
+   TRANSFER      A successful domain name transfer within the reporting
                  period.
               
-   TRADE         A successful domain name trade within the report
+   TRADE         A successful domain name trade within the reporting
                  period.
               
    UPDATE        A successful billable domain name update within the
-                 report period.
+                 reporting period.
               
-   RESTORE       A successful domain name restore within the report
+   RESTORE       A successful domain name restore within the reporting
                  period.
                  This event MUST only include the restore fee. Any
                  additional renewal fee MUST be independently listed.
+                 
+McPherson & Sattler       Expires September 23, 2019            [Page 4]
+
+Internet-Draft               Transaction Report               March 2019
   
-   REGISTRYLOCK  A successful billable registry lock applied to domain
-                 name within the report period.
+   REGISTRYLOCK  A successful billable registry lock applied to the
+                 domain name within the reporting period.
 
 4.2.  Non-Standard Transaction Types
 
    Non-Standard Transactions MAY be listed in the report and MAY receive
-   a custom type, but it MUST have a corresponding description in the
-   
-McPherson & Sattler         Expires July 28, 2019               [Page 4]
-
-Internet-Draft               Transaction Report             January 2019
-   
+   a custom type, but it MUST have a corresponding description in the   
    description column.
 
 5.  Transaction Periods
    
-   Transaction Types usually occur in Periods of 1 to 10 years,
+   Transaction Types usually occur in Periods of 1 to 10 years, and
    sometimes there are monthly periods. Therefore, each transaction
    MUST either have a Period associated or it MUST be empty if no Period
-   is assigned to the transaction.
+   is assigned to the operation.
    
    The Period format MUST be in the format <integer>, where
    <integer> MUST be unsigned and between 1 and 65535, without any
@@ -238,9 +238,9 @@ Internet-Draft               Transaction Report             January 2019
    The Term format MUST be in the format <character> and MUST be either 
    'y' for years or 'm' for months.
    
-   If the number of months results in a full year, then the full year
-   MUST be used, e.g. instead of 12,m or 24,m, it should be 1,y
-   respectively 2,y.
+   If the number of months results in a full year, then the year MUST be
+   used, e.g. instead of 12,m or 24,m, it should be 1,y respectively
+   2,y.
    
 6.  Transaction Fees
 
@@ -248,7 +248,7 @@ Internet-Draft               Transaction Report             January 2019
    currency and the period MUST be listed separately.
    
    Fees MUST either be whole numbers or rounded to two decimal places.
-   A period (.) is used as the dividing point.
+   The dividing point is a period (.).
 
 6.1.  Deviating Fees
 
@@ -258,13 +258,18 @@ Internet-Draft               Transaction Report             January 2019
 7.  Registrar ID
 
    A unique registrar ID MUST be listed, with each transaction. Those
-   IDs MUST be according the IANA registrar IDs (https://www.iana.org/
-   assignments/registrar-ids/registrar-ids.xhtml) where applicable,
-   otherwise another unique registrar ID MUST be used.
+   IDs MUST be according to the IANA registrar IDs
+   (https://www.iana.org/assignments/registrar-ids/registrar-ids.xhtml)
+   where applicable, otherwise, another unique registrar ID MUST be
+   used.
 
 8.  Example
 
 8.1.  Single TLD File Example
+
+McPherson & Sattler       Expires September 23, 2019            [Page 5]
+
+Internet-Draft               Transaction Report               March 2019
 
    This is an example of a transaction report for a single top-level
    domain .example.
@@ -275,11 +280,6 @@ Internet-Draft               Transaction Report             January 2019
    REGISTRARID,DESCRIPTION
    54321-XYZ,example,nic.example,2018-11-08T08:01:01Z,AUTORENEW,1,y,10,
    USD,1,
-   
-McPherson & Sattler         Expires July 28, 2019               [Page 5]
-
-Internet-Draft               Transaction Report             January 2019
-   
    54322-XYZ,example,foo.example,2018-11-09T08:00:00Z,CREATE,3,y,10,USD,
    1,
    54323-XYZ,example,bar.example,2018-11-09T08:01:01Z,CREATE,1,y,1000,
@@ -325,11 +325,12 @@ Internet-Draft               Transaction Report             January 2019
 11.  Implementation Status
 
    Note to RFC Editor: Please remove this section and the reference to
-   [RFC7942] before publication.
    
-McPherson & Sattler         Expires July 28, 2019               [Page 6]
+McPherson & Sattler       Expires September 23, 2019            [Page 6]
 
-Internet-Draft               Transaction Report             January 2019
+Internet-Draft               Transaction Report               March 2019
+   
+   [RFC7942] before publication.
 
    This section records the status of known implementations of the
    protocol defined by this specification at the time of posting of this
@@ -378,9 +379,9 @@ Internet-Draft               Transaction Report             January 2019
               7942, July 2016,
               <https://www.rfc-editor.org/info/rfc7942>.
               
-McPherson & Sattler         Expires July 28, 2019               [Page 7]
+McPherson & Sattler       Expires September 23, 2019            [Page 7]
 
-Internet-Draft               Transaction Report             January 2019
+Internet-Draft               Transaction Report               March 2019
    
 Appendix A.  Change History
 
@@ -399,6 +400,10 @@ A.3.  Change from 02 to TXN 00
   Changed draft name. Added Term column to further clarify Period.
   Defined Standard  Transaction Types. Added Non-Standard Transaction
   Types. Changed Column order so that DESCRIPTION is at end.
+  
+A.4.  Change from TXN 00 to TXN 01
+
+  Editorial changes.
 
 Appendix B.  Acknowledgements
 
@@ -427,5 +432,5 @@ Authors' Addresses
    Email: tobias.sattler@me.com
    URI:   https://tobiassattler.com
 
-McPherson & Sattler         Expires July 28, 2019               [Page 8]
+McPherson & Sattler       Expires September 23, 2019            [Page 8]
 
