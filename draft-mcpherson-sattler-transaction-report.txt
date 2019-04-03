@@ -365,7 +365,7 @@ Internet-Draft               Transaction Report               April 2019
    Level of maturity: Research implementation in united-domains
    Reselling environment.
    
-   Version compatibility: Version DOMAININV 03 is implemented.
+   Version compatibility: Version TXN 02 is implemented.
 
    Coverage: All aspects of this document are implemented.
 
