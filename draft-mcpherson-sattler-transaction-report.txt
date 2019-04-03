@@ -428,7 +428,7 @@ A.4.  Change from TXN 00 to TXN 01
   
 A.5.  Change from TXN 01 to TXN 02
 
-   Added united-domains Reselling as PoC for implementation.
+   Added implementation reference.
    
 McPherson & Sattler        Expires October 14, 2019             [Page 8]
 
