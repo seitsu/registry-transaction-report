@@ -443,6 +443,7 @@ Appendix B.  Acknowledgements
    o Gaurav Vedi, Dominion Registries
    o Jody Kolker, GoDaddy
    o Roger Carney, GoDaddy
+   o Tim Ettel, united-domains
 
 Authors' Addresses
 
