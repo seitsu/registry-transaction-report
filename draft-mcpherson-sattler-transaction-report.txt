@@ -1,10 +1,10 @@
 Internet Engineering Task Force                             N. McPherson
 Internet-Draft                                              1&1 IONOS SE
 Intended status: Best Current Practice                T. Sattler, Editor
-Expires: October 14, 2019                                 April 15, 2019
+Expires: April 15, 2020                                 October 15, 2019
 
                             Transaction Report
-              draft-mcpherson-sattler-transaction-report-02
+              draft-mcpherson-sattler-transaction-report-03
 
 Abstract
 
@@ -26,7 +26,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress".
 
-   This Internet-Draft will expire on October 14, 2019.
+   This Internet-Draft will expire on April 15, 2020.
 
 Copyright Notice
 
@@ -43,9 +43,9 @@ Copyright Notice
    the Trust Legal Provisions and are provided without warranty as
    described in the Simplified BSD License.
 
-McPherson & Sattler        Expires October 14, 2019             [Page 1]
+McPherson & Sattler        Expires April 15, 2020               [Page 1]
 
-Internet-Draft               Transaction Report               April 2019
+Internet-Draft               Transaction Report             October 2019
 
 Table of Contents
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
@@ -78,6 +78,7 @@ Table of Contents
      A.3.  Change from 02 to TXN 00  . . . . . . . . . . . . . . . .   8
      A.4.  Change from TXN 00 to TXN 01  . . . . . . . . . . . . . .   8
      A.5.  Change from TXN 01 to TXN 02  . . . . . . . . . . . . . .   8
+     A.6.  Change from TXN 02 to TXN 03  . . . . . . . . . . . . . .   9
    Appendix B.  Acknowledgements . . . . . . . . . . . . . . . . . .   9
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   9
 
@@ -98,9 +99,9 @@ Table of Contents
    the [I-D.mcpherson-sattler-report-structure] and delivered
    by the [I-D.mcpherson-sattler-reporting-repository].
    
-McPherson & Sattler        Expires October 14, 2019             [Page 2]
+McPherson & Sattler        Expires April 15, 2020               [Page 2]
 
-Internet-Draft               Transaction Report               April 2019
+Internet-Draft               Transaction Report             October 2019
 
 2.  Terminology and Definitions
 
@@ -155,9 +156,9 @@ Internet-Draft               Transaction Report               April 2019
                      or MUST be empty if no Period is assigned to the
                      operation.
                      
-McPherson & Sattler        Expires October 14, 2019             [Page 3]
+McPherson & Sattler        Expires April 15, 2020               [Page 3]
 
-Internet-Draft               Transaction Report               April 2019
+Internet-Draft               Transaction Report             October 2019
 
    TERM              It MUST contain the unit of the Period noted
                      according to section 5 of this document.
@@ -213,9 +214,9 @@ Internet-Draft               Transaction Report               April 2019
                  This event MUST only include the restore fee. Any
                  additional renewal fee MUST be independently listed.
                  
-McPherson & Sattler        Expires October 14, 2019             [Page 4]
+McPherson & Sattler        Expires April 15, 2020               [Page 4]
 
-Internet-Draft               Transaction Report               April 2019
+Internet-Draft               Transaction Report             October 2019
   
    REGISTRYLOCK  A successful billable registry lock applied to the
                  domain name within the reporting period.
@@ -269,9 +270,9 @@ Internet-Draft               Transaction Report               April 2019
 
 8.1.  Single TLD File Example
 
-McPherson & Sattler        Expires October 14, 2019             [Page 5]
+McPherson & Sattler        Expires April 15, 2020               [Page 5]
 
-Internet-Draft               Transaction Report               April 2019
+Internet-Draft               Transaction Report             October 2019
 
    This is an example of a transaction report for a single top-level
    domain .example.
@@ -328,9 +329,9 @@ Internet-Draft               Transaction Report               April 2019
 
    Note to RFC Editor: Please remove this section and the reference to
    
-McPherson & Sattler        Expires October 14, 2019             [Page 6]
+McPherson & Sattler        Expires April 15, 2020               [Page 6]
 
-Internet-Draft               Transaction Report               April 2019
+Internet-Draft               Transaction Report             October 2019
    
    [RFC7942] before publication.
 
@@ -374,9 +375,9 @@ Internet-Draft               Transaction Report               April 2019
 
    URL: https://www.ud-reselling.com/en/
 
-McPherson & Sattler        Expires October 14, 2019             [Page 7]
+McPherson & Sattler        Expires April 15, 2020               [Page 7]
 
-Internet-Draft               Transaction Report               April 2019
+Internet-Draft               Transaction Report             October 2019
 
 12.  References
 
@@ -417,21 +418,26 @@ A.2.  Change from 01 to 02
    from 1-99 to unsigned 16 bit integer.
 
 A.3.  Change from 02 to TXN 00
-  Changed draft name. Added Term column to further clarify Period.
-  Defined Standard  Transaction Types. Added Non-Standard Transaction
-  Types. Changed Column order so that DESCRIPTION is at end.
+
+   Changed draft name. Added Term column to further clarify Period.
+   Defined Standard  Transaction Types. Added Non-Standard Transaction
+   Types. Changed Column order so that DESCRIPTION is at end.
   
 A.4.  Change from TXN 00 to TXN 01
 
-  Editorial changes.
+   Editorial changes.
   
 A.5.  Change from TXN 01 to TXN 02
 
    Added implementation reference.
-   
-McPherson & Sattler        Expires October 14, 2019             [Page 8]
+
+McPherson & Sattler        Expires April 15, 2020               [Page 8]
 
-Internet-Draft               Transaction Report               April 2019
+Internet-Draft               Transaction Report             October 2019
+
+A.6.  Change from TXN 02 to TXN 03
+
+   Editorial changes.
 
 Appendix B.  Acknowledgements
 
@@ -461,5 +467,5 @@ Authors' Addresses
    Email: tobias.sattler@me.com
    URI:   https://tobiassattler.com
 
-McPherson & Sattler        Expires October 14, 2019             [Page 9]
+McPherson & Sattler        Expires April 15, 2020               [Page 9]
 
